@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introdução ao HTML - Apostila</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 40px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #005a9c;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: Consolas, monospace;
+    }
+    table {
+      border-collapse: collapse;
+      margin-top: 15px;
+      width: 100%;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+    th {
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Introdução ao HTML – Criando a Estrutura de um Site</h1>
+
+  <h2>O que é HTML?</h2>
+  <p>Se você quer aprender a criar sites, precisa começar com HTML! Mas o que exatamente é isso?</p>
+  <p><strong>HTML</strong> significa <strong>HyperText Markup Language</strong> (Linguagem de Marcação de Hipertexto). É a linguagem que usamos para estruturar o conteúdo das páginas web. Ao contrário de linguagens de programação, o HTML não executa ações — ele apenas organiza e apresenta informações.</p>
+
+  <h2>Elementos e Tags: Os Blocos de Construção da Web</h2>
+  <p>HTML é construído com <strong>elementos</strong>, e cada elemento é representado por <strong>tags</strong>.</p>
+  <p>As tags servem para “rotular” diferentes partes do conteúdo, como:</p>
+  <ul>
+    <li>Títulos: <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code></li>
+    <li>Parágrafos: <code>&lt;p&gt;</code></li>
+    <li>Listas: <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code></li>
+    <li>Tabelas: <code>&lt;table&gt;</code></li>
+    <li>Links: <code>&lt;a&gt;</code></li>
+  </ul>
+  <p>Essas tags não aparecem visualmente na página, mas dizem ao navegador como mostrar cada parte do conteúdo.</p>
+
+  <h2>Vamos Começar na Prática</h2>
+  <p>Veja abaixo um exemplo simples de código HTML:</p>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Minha Primeira Página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Bem-vindo!&lt;/h1&gt;
+  &lt;p&gt;Este é o meu primeiro parágrafo em HTML.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+  <h3>Explicação:</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Elemento</th>
+        <th>Função</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><code>&lt;!DOCTYPE html&gt;</code></td><td>Declara que o documento usa HTML5</td></tr>
+      <tr><td><code>&lt;html&gt;</code></td><td>Elemento raiz da página</td></tr>
+      <tr><td><code>&lt;head&gt;</code></td><td>Contém informações invisíveis, como título e codificação</td></tr>
+      <tr><td><code>&lt;title&gt;</code></td><td>Define o título exibido na aba do navegador</td></tr>
+      <tr><td><code>&lt;body&gt;</code></td><td>Contém o conteúdo visível da página</td></tr>
+      <tr><td><code>&lt;h1&gt;</code></td><td>Título principal da página</td></tr>
+      <tr><td><code>&lt;p&gt;</code></td><td>Parágrafo de texto</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Como as Tags Funcionam</h2>
+  <p>A maioria das tags HTML vêm em <strong>pares</strong>:</p>
+  <p>Uma tag de abertura, por exemplo: <code>&lt;p&gt;</code><br>
+  Uma tag de fechamento: <code>&lt;/p&gt;</code></p>
+  <p>O conteúdo fica entre elas:</p>
+  <pre><code>&lt;p&gt;Esse é um parágrafo.&lt;/p&gt;</code></pre>
+
+  <p>Algumas tags são <strong>autoencerradas</strong>, como <code>&lt;br&gt;</code>, e não precisam de uma tag de fechamento.</p>
+
+  <h2>O Papel dos Navegadores</h2>
+  <p>O HTML por si só não cria um site visualmente bonito. Quem transforma o código em uma página visível é o <strong>navegador</strong>.</p>
+  <p>Navegadores como Chrome, Firefox, Edge ou Safari <strong>interpretam</strong> o HTML e exibem o conteúdo corretamente na tela.</p>
+
+  <h2>Visualizando a Estrutura de uma Página</h2>
+  <pre><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Título da Página&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Isso é um título&lt;/h1&gt;
+    &lt;p&gt;Isso é um parágrafo.&lt;/p&gt;
+    &lt;p&gt;Este é outro parágrafo.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <h2>Resumo da Aula</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Conceito</th>
+        <th>Explicação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>HTML</td><td>Linguagem usada para estruturar conteúdo de páginas web</td></tr>
+      <tr><td>Tags</td><td>Rótulos que definem o tipo e a função do conteúdo</td></tr>
+      <tr><td>Elementos</td><td>Compostos por tag de abertura, conteúdo e tag de fechamento</td></tr>
+      <tr><td>DOCTYPE</td><td>Informa ao navegador qual versão do HTML está sendo usada (HTML5)</td></tr>
+      <tr><td>Navegador</td><td>Interpreta o código HTML e mostra o conteúdo visualmente</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Pausa para Respirar ☕</h2>
+  <p>Agora que você já conhece os fundamentos do HTML, que tal praticar criando sua própria página?</p>
+
+</body>
+</html>
