@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capítulo 2 – Codificação e DOCTYPE em HTML</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 40px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #005a9c;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: Consolas, monospace;
+    }
+    table {
+      border-collapse: collapse;
+      margin-top: 15px;
+      width: 100%;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+    th {
+      background-color: #e0e0e0;
+    }
+    .back-link {
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+    .back-link a {
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="back-link">
+    <a href="index.html">⬅ Voltar ao Sumário</a>
+  </div>
+
+  <h1>Capítulo 2 – Codificação e Declaração DOCTYPE em Arquivos HTML</h1>
+
+  <p>Ao criarmos páginas HTML, é fundamental garantir que o conteúdo seja corretamente interpretado e exibido pelos navegadores. Dois conceitos essenciais nesse processo são: a <strong>codificação de caracteres</strong> e a <strong>declaração do tipo de documento (DOCTYPE)</strong>. Vamos explorar cada um deles!</p>
+
+  <h2>🧾 O que é codificação em arquivos HTML?</h2>
+  <p>Codificação é o processo que permite que letras, números e símbolos sejam representados por valores numéricos que os computadores conseguem entender.</p>
+  <p>No contexto de arquivos HTML (e também CSS, JavaScript, etc.), a codificação garante que os textos apareçam corretamente, sem erros ou símbolos estranhos.</p>
+
+  <h2>🔤 ASCII e Unicode: qual a diferença?</h2>
+
+  <h3>🔹 ASCII (American Standard Code for Information Interchange)</h3>
+  <ul>
+    <li>É um dos primeiros padrões de codificação.</li>
+    <li>Mapeia um conjunto limitado de caracteres (apenas o alfabeto latino, números e símbolos básicos) a números de 0 a 127.</li>
+    <li>Ainda é utilizado, mas é restrito a conteúdos em inglês ou com poucos caracteres especiais.</li>
+  </ul>
+
+  <h3>🔹 Unicode</h3>
+  <ul>
+    <li>Criado para suportar uma ampla variedade de idiomas e símbolos.</li>
+    <li>Inclui alfabetos de diferentes línguas (como árabe, chinês, cirílico, etc.), emojis e símbolos técnicos.</li>
+    <li><strong>UTF-8</strong> é a forma mais comum de codificação Unicode na web.</li>
+  </ul>
+
+  <h2>🌍 Por que usar UTF-8 em HTML?</h2>
+  <p><strong>UTF-8</strong> permite que desenvolvedores escrevam páginas em múltiplos idiomas e com diversos caracteres especiais, sem se preocupar com erros de exibição.</p>
+  <p>É leve, eficiente e compatível com a maioria dos navegadores e sistemas.</p>
+
+  <p>Para definir a codificação UTF-8 em um arquivo HTML, usamos a seguinte linha dentro da tag <code>&lt;head&gt;</code>:</p>
+
+  <pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+
+  <p><strong>⚠️ Importante:</strong> Se a codificação declarada não corresponder à codificação real do arquivo, o navegador pode exibir caracteres incorretamente, como símbolos estranhos ou "caixinhas".</p>
+
+  <h2>📌 O que é o DOCTYPE em HTML?</h2>
+  <p>A declaração <code>&lt;!DOCTYPE&gt;</code> informa ao navegador qual versão do HTML está sendo utilizada no documento. Essa linha deve sempre aparecer no topo do arquivo HTML, antes de qualquer outra marcação.</p>
+
+  <h3>📄 Exemplo:</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+
+  <p>No HTML5, essa é a forma correta e mais simples de declarar o DOCTYPE. Ela garante que o navegador interprete o código de acordo com os padrões modernos.</p>
+
+  <h2>🏛️ Versões do HTML: por que o DOCTYPE importa?</h2>
+  <p>Versões anteriores do HTML, como HTML 4.01 ou XHTML, exigiam declarações mais longas e específicas.</p>
+  <p>O HTML5, lançado oficialmente em 2014, trouxe uma sintaxe mais simples e funcionalidades poderosas para construção de sites modernos, acessíveis e responsivos.</p>
+
+  <h2>📌 Resumo dos Destaques</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Conceito</th>
+        <th>Explicação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Codificação</td>
+        <td>Conversão de caracteres em números que o computador entende</td>
+      </tr>
+      <tr>
+        <td>ASCII</td>
+        <td>Tabela antiga com suporte limitado a caracteres latinos</td>
+      </tr>
+      <tr>
+        <td>Unicode</td>
+        <td>Suporta múltiplos idiomas e símbolos especiais</td>
+      </tr>
+      <tr>
+        <td>UTF-8</td>
+        <td>Forma mais comum e flexível de Unicode, ideal para web</td>
+      </tr>
+      <tr>
+        <td><code>&lt;meta charset&gt;</code></td>
+        <td>Tag que define a codificação usada no HTML (geralmente UTF-8)</td>
+      </tr>
+      <tr>
+        <td><code>&lt;!DOCTYPE&gt;</code></td>
+        <td>Declaração obrigatória no topo do HTML que define a versão do documento</td>
+      </tr>
+      <tr>
+        <td>HTML5</td>
+        <td>Versão atual e recomendada do HTML, moderna e compatível com os padrões</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>🔗 Referência</h2>
+  <ul>
+    <li>
+      <a href="https://www.w3schools.com/html/html_charset.asp" target="_blank">
+        W3Schools – HTML Charset
+      </a>
+    </li>
+  </ul>
+</body>
+</html>
