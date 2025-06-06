@@ -39,8 +39,6 @@ th {
     text-decoration: underline;
 }
 .box {
-    width: 80%;
-    height: 80%;
     background: white;
     padding: 25px;
     border-radius: 8px;
