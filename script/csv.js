@@ -3,48 +3,46 @@
 document.addEventListener("DOMContentLoaded", carregarRanking);
 
  function carregarRanking() {
-  // Caminho absoluto para o CSV baseado na origem do site
-  const csvPath = `${location.origin}/desafio-html-info1-ifpr/assets/ranking_info1_2025.csv`;
-  console.log(csvPath);
+  const csvPath = `${location.origin}/script/assests/ranking_info1_2025.csv`;
 
-  // Requisição do arquivo CSV
   fetch(csvPath)
     .then(response => {
       if (!response.ok) throw new Error('Erro ao carregar o arquivo CSV');
       return response.text();
     })
     .then(data => {
-      // Divide o conteúdo em linhas e remove espaços
       const lines = data.split('\n').map(line => line.trim()).filter(line => line !== '');
-
-      // Verifica se o corpo da tabela existe; se não, cria
       let tbody = document.querySelector('#rankingTable tbody');
       if (!tbody) {
         tbody = document.createElement('tbody');
         document.querySelector('#rankingTable').appendChild(tbody);
       }
-
       tbody.innerHTML = ''; // Limpa conteúdo anterior
 
-      // Processa cada linha do CSV
-      for (const line of lines) {
-        const [email, atv1, atv2, atv3, resg] = line.split(',').map(item => item.trim());
-
-        // Cálculo do total: soma das atividades menos o resgate
+      // Converte o CSV em um array de objetos com total calculado
+      const ranking = lines.map(line => {
+        const [email, atv1, atv2, atv3, resg] = line.split(',').map(val => val.trim());
         const total = (parseInt(atv1) || 0) + (parseInt(atv2) || 0) + (parseInt(atv3) || 0) - (parseInt(resg) || 0);
+        return { email, atv1, atv2, atv3, resg, total };
+      });
 
-        // Cria nova linha da tabela com os dados
+      // Ordena do maior para o menor total
+      ranking.sort((a, b) => b.total - a.total);
+
+      // Monta cada linha da tabela
+      ranking.forEach((aluno, index) => {
+        const foguinho = index < 3 ? ' 🔥' : ''; // Top 3 com fogo
         const row = document.createElement('tr');
         row.innerHTML = `
-          <td>${email}</td>
-          <td>${atv1}</td>
-          <td>${atv2}</td>
-          <td>${atv3}</td>
-          <td>${resg}</td>
-          <td class="highlight">${total}</td>
+          <td>${aluno.email}</td>
+          <td>${aluno.atv1}</td>
+          <td>${aluno.atv2}</td>
+          <td>${aluno.atv3}</td>
+          <td>${aluno.resg}</td>
+          <td class="highlight">${aluno.total}${foguinho}</td>
         `;
         tbody.appendChild(row);
-      }
+      });
     })
     .catch(error => {
       console.error('Erro ao processar o CSV:', error);
