@@ -33,9 +33,9 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
       // Monta cada linha da tabela
       ranking.forEach((aluno, index) => {
         const foguinho = index < 3 ? ' 🔥' : ''; // Top 3 com fogo
+        const isPrimeiroLugar = index === 0;
         const row = document.createElement('tr');
 
-        
         // Se for o primeiro colocado, aplica estilo especial
         if (isPrimeiroLugar) {
           row.style.backgroundColor = '#fff8e1'; // fundo amarelo claro
