@@ -21,13 +21,14 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
 
       // Converte o CSV em um array de objetos com total calculado
       const ranking = lines.map(line => {
-        const [email, atv1, atv2, atv3, resg] = line.split(',').map(val => val.trim());
-        const total = (parseInt(atv1) || 0) + (parseInt(atv2) || 0) + (parseInt(atv3) || 0) - (parseInt(resg) || 0);
-        return { email, atv1, atv2, atv3, resg, total };
+        const [email, atv1, atv2, atv3, atv4, resg, total] = line.split(',').map(val => val.trim());
+        const total_calculado = (parseInt(atv1) || 0) + (parseInt(atv2) || 0) + (parseInt(atv3) || 0) + (parseInt(atv4) || 0)- (parseInt(resg) || 0);
+        console.log(total)
+        return { email, atv1, atv2, atv3, resg, total_calculado, total };
       });
 
       // Ordena do maior para o menor total
-      ranking.sort((a, b) => b.total - a.total);
+      ranking.sort((a, b) => b.total_calculado - a.total_calculado);
 
       // Monta cada linha da tabela
       ranking.forEach((aluno, index) => {
@@ -38,8 +39,9 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
           <td>${aluno.atv1}</td>
           <td>${aluno.atv2}</td>
           <td>${aluno.atv3}</td>
-          <td>${aluno.resg}</td>
-          <td class="highlight">${aluno.total}${foguinho}</td>
+          <td>-${aluno.resg}</td>
+          <td>${aluno.atv4}</td>
+          <td class="highlight">${aluno.total_calculado}${foguinho}</td>
         `;
         tbody.appendChild(row);
       });
