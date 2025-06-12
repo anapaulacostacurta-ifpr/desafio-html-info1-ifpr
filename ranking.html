@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+    <meta charset="UTF-8">
+    <title>📊 Ranking Automático com CSV Local</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        padding: 2rem;
+        max-width: 1000px;
+        margin: auto;
+        }
+        h1 {
+        color: #2c3e50;
+        text-align: center;
+        }
+        table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff;
+        margin-top: 2rem;
+        }
+        th, td {
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        text-align: center;
+        }
+        th {
+        background-color: #005a9c;
+        color: white;
+        }
+        tr:nth-child(even) {
+        background-color: #f0f0f0;
+        }
+        .highlight {
+        background-color: #d1e7dd;
+        font-weight: bold;
+        }
+    </style>
+    </head>
+    <body>
+
+    <h1>📊 Ranking de Alunos - Resgate em 06/06/2025</h1>
+
+    <table id="rankingTable">
+        <thead>
+        <tr>
+            <th>Endereço de E-mail</th>
+            <th>Atividade 1</th>
+            <th>Atividade 2</th>
+            <th>Atividade 3</th>
+            <th>Resgate 06/06/2025</th>
+            <th>Total</th>
+        </tr>
+        </thead>
+    </table>
+    <script src="/script/csv.js"></script>
+    </body>
+</html>
