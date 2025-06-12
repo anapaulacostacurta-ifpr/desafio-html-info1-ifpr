@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
 
  function carregarRanking() {
   // Caminho absoluto para o CSV baseado na origem do site
-  const csvPath = `${location.origin}/assets/ranking_info1_2025.csv`;
+  const csvPath = `${location.origin}/desafio-html-info1-ifpr/assets/ranking_info1_2025.csv`;
   console.log(csvPath);
 
   // Requisição do arquivo CSV
