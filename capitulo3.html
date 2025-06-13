@@ -11,11 +11,9 @@
                 <a href="index.html">⬅ Voltar ao Sumário</a>
             </div>
             <h1>Capítulo 3 – Sintaxe do HTML5</h1>
-
             <p>
                 O HTML5 trouxe uma forma mais simples e moderna de escrever código HTML. Neste capítulo, vamos aprender a sintaxe correta para escrever documentos HTML5 de forma limpa, funcional e compatível com todos os navegadores modernos.
             </p>
-
             <h2>📌 Declaração do Tipo de Documento (DOCTYPE)</h2>
             <p>
                 Todo documento HTML5 deve começar com a seguinte declaração:
@@ -24,41 +22,55 @@
             <p>
                 Isso informa ao navegador que estamos utilizando a versão mais recente do HTML (HTML5).
             </p>
-
             <h2>📂 Estrutura Básica do HTML5</h2>
             <p>Veja o modelo mais básico de um documento HTML5:</p>
-
-            <pre><code>&lt;!DOCTYPE html&gt;
-            &lt;html lang="pt-BR"&gt;
-            &lt;head&gt;
-            &lt;meta charset="UTF-8"&gt;
-            &lt;title&gt;Título da Página&lt;/title&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-            &lt;h1&gt;Título Principal&lt;/h1&gt;
-            &lt;p&gt;Este é um parágrafo de exemplo.&lt;/p&gt;
-            &lt;/body&gt;
-            &lt;/html&gt;
-            </code></pre>
-
+            <div class="prog-code">
+                <pre>
+                    <code>
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="pt-BR"&gt;
+                        &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;Título da Página&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                        &lt;h1&gt;Título Principal&lt;/h1&gt;
+                        &lt;p&gt;Este é um parágrafo de exemplo.&lt;/p&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code>
+                </pre>
+            </div>
             <h2>🔤 Uso de letras minúsculas</h2>
             <p>No HTML5, recomenda-se o uso de letras minúsculas para todas as tags e atributos. Isso melhora a legibilidade e segue boas práticas modernas.</p>
-
             <h2>✅ Tags não precisam ser fechadas com "/&gt;"</h2>
             <p>Tags como <code>&lt;br&gt;</code> e <code>&lt;hr&gt;</code> não precisam ser escritas como <code>&lt;br /&gt;</code>. O HTML5 aceita apenas <code>&lt;br&gt;</code> de forma válida.</p>
-
             <h3>Exemplo:</h3>
-            <pre><code>&lt;p&gt;Texto com quebra de linha&lt;br&gt;Nova linha aqui.&lt;/p&gt;</code></pre>
-
+            <div class="prog-code">
+                <pre>
+                    <code>
+                        &lt;p&gt;Texto com quebra de linha&lt;br&gt;Nova linha aqui.&lt;/p&gt;
+                    </code>
+                </pre>
+            </div>
             <h2>📥 Atributos não precisam de aspas se não houver espaços</h2>
             <p>É permitido omitir as aspas nos atributos que não possuem espaços ou caracteres especiais, mas o uso de aspas é altamente recomendado para evitar erros.</p>
-
             <h3>Com aspas (recomendado):</h3>
-            <pre><code>&lt;input type="text" name="usuario"&gt;</code></pre>
-
+            <div class="prog-code">
+                <pre>
+                    <code>
+                        &lt;input type="text" name="usuario"&gt;
+                    </code>
+                </pre>
+            </div>
             <h3>Sem aspas (válido, mas não recomendado):</h3>
-            <pre><code>&lt;input type=text name=usuario&gt;</code></pre>
-
+            <div class="prog-code">
+                <pre>
+                    <code>
+                        &lt;input type=text name=usuario&gt;
+                    </code>
+                </pre>
+            </div>
             <h2>📄 Comparativo: HTML4 vs HTML5</h2>
             <table>
                 <thead>
@@ -69,12 +81,24 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;</code></td>
-                    <td><code>&lt;!DOCTYPE html&gt;</code></td>
+                    <td>
+                        <div class="prog-code">
+                            <code>
+                                &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;
+                            </code>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="prog-code">
+                            <code>
+                                &lt;!DOCTYPE html&gt;
+                            </code>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Uso de <code>&lt;br /&gt;</code></td>
-                    <td>Uso de <code>&lt;br&gt;</code></td>
+                    <td>Uso de <div class="prog-code">&lt;br /&gt;</div></td>
+                    <td>Uso de <div class="prog-code">&lt;br&gt;</div></td>
                 </tr>
                 <tr>
                     <td>Maior rigidez com sintaxe</td>
@@ -88,7 +112,7 @@
                 <li>Tags devem estar sempre corretamente abertas e fechadas (exceto as autoencerradas).</li>
                 <li>Não usar maiúsculas em tags e atributos.</li>
                 <li>Evitar espaços em branco desnecessários.</li>
-                <li>Inserir sempre o <code>&lt;meta charset="UTF-8"&gt;</code> dentro do <code>&lt;head&gt;</code>.</li>
+                <li>Inserir sempre o <div class="prog-code">&lt;meta charset="UTF-8"&gt;</div> dentro do <div class="prog-code">&lt;head&gt;</div>.</li>
             </ul>
 
             <h2>🔗 Referência oficial</h2>
@@ -112,7 +136,7 @@
                 <tbody>
                 <tr>
                     <td>DOCTYPE</td>
-                    <td>Usar <code>&lt;!DOCTYPE html&gt;</code> no topo do documento</td>
+                    <td>Usar <div class="prog-code">&lt;!DOCTYPE html&gt;</div> no topo do documento</td>
                 </tr>
                 <tr>
                     <td>Minúsculas</td>
@@ -124,7 +148,7 @@
                 </tr>
                 <tr>
                     <td>Tags autoencerradas</td>
-                    <td>Não precisam de barra (<code>/</code>) no final</td>
+                    <td>Não precisam de barra (<b>/</b>) no final</td>
                 </tr>
                 <tr>
                     <td>Codificação</td>
