@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
 
       // Monta cada linha da tabela
       ranking.forEach((aluno, index) => {
-        const foguinho = index < 3 ? ' 🔥' : ''; // Top 3 com fogo
+        var foguinho = index < 3 ? ' 🔥' : ''; // Top 3 com fogo
         const isPrimeiroLugar = index === 0;
         const row = document.createElement('tr');
 
