@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
 
       // Converte o CSV em um array de objetos com total calculado
       const ranking = lines.map(line => {
-        const [email, atv1, atv2, atv3, atv4, resg, total] = line.split(',').map(val => val.trim());
+        const [email, atv1, atv2, atv3, resg, atv4, total] = line.split(',').map(val => val.trim());
         const total_calculado = (parseInt(atv1) || 0) + (parseInt(atv2) || 0) + (parseInt(atv3) || 0) + (parseInt(atv4) || 0) - (parseInt(resg) || 0);
         console.log(total)
         return { email, atv1, atv2, atv3, atv4, resg, total_calculado, total };
