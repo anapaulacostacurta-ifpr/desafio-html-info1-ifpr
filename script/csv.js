@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
 
         // Se for o primeiro colocado, aplica estilo especial
         if (isPrimeiroLugar) {
+          foguinho = '🥇';
           row.style.backgroundColor = '#fff8e1'; // fundo amarelo claro
           row.style.fontWeight = 'bold';
         }
