@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EscapeRoom</title>
+        <link rel="stylesheet" href="./style/style.css">
+    </head>
+    <body>
+        <div class="box">
+            <div class="back-link">
+            <a href="index.html">
+                ⬅ Voltar ao Sumário
+            </a>
+            </div>
+            <h1>
+               EscapeRoom </b>
+            </h1>
+            <h2>O que é o atributo <b>hidden</b>?</h2>
+            <p>
+                O atributo <b>hidden</b> é um atributo booleano do HTML que serve para ocultar elementos da página. 
+                Quando aplicado, o conteúdo continua no código, mas não é exibido ao usuário.
+            </p>
+            <h2>Quando usar?</h2>
+            <p>
+                Ele é útil quando se deseja esconder uma informação temporariamente, sem removê-la do HTML. 
+                Pode ser ativado ou desativado com JavaScript para exibir mensagens, feedbacks ou partes de interface.
+            </p>
+            <h2>Exemplo em HTML</h2>
+            <div class="prog-code">
+                <pre>
+                    <code><br>&lt;p hidden&gt;Este parágrafo está oculto.&lt;/p&gt;<br>&lt;div hidden&gt;<br>&lt;h3&gt;Título Oculto&lt;/h3&gt;<br>&lt;p&gt;Este conteúdo não será mostrado na página.&lt;/p&gt;<br>&lt;/div&gt;</code>
+                </pre>
+            </div>
+            <p>Esse conteúdo está presente no código-fonte, mas não será exibido ao carregar a página.</p>
+            <h2>Mostrando com JavaScript</h2>
+            <div class="prog-code">
+                <pre>
+                    <code><br>&lt;button onclick="document.getElementById('mensagem').hidden = false;"&gt;<br>Mostrar mensagem<br>&lt;/button&gt;<br>&lt;p id="mensagem" hidden&gt;Agora você consegue me ver!&lt;/p&gt; 
+                    <br></code>
+                </pre>
+            </div>
+            <p>O botão acima usa JavaScript para remover o atributo <b>hidden</b> e exibir o parágrafo.</p>
+            <h3>Explicação:</h3>
+            <table>
+                <thead>
+                    <tr>
+                    <th>Elemento</th>
+                    <th>Função</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <b>&lt;p hidden&gt;</b>
+                        </td>
+                        <td>Oculta um parágrafo da visualização da página</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>document.getElementById(...).hidden = false</b>
+                        </td>
+                        <td>JavaScript que remove o atributo e mostra o conteúdo</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>&lt;button onclick="..."&gt;</b>
+                        </td>
+                        <td>Dispara uma ação ao ser clicado</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Resumo</h2>
+            <ul>
+                <li>
+                    <b>hidden</b> é um atributo booleano nativo do HTML.
+                </li>
+                <li>Esconde visualmente o elemento, mas mantém sua existência no DOM.</li>
+                <li>É possível reexibir o conteúdo com JavaScript.</li>
+            </ul>
+            <h2>Referência</h2>
+            <ul>
+                <li>
+                    <a href="https://www.w3schools.com/tags/att_hidden.asp" target="_blank">
+                    www.w3schools.com – Atributo oculto HTML
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="back-link" style="margin-top: 30px;">
+            <a href="index.html">
+            ⬅ Voltar ao Menu
+            </a>
+        </div>
+    </body>
+</html>

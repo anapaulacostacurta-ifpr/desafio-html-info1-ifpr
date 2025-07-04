@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Capítulo 4 – Atributos HTML</title>
+        <link rel="stylesheet" href="./style/style.css" />
+    </head>
+    <body>
+        <div class="box">
+            <div class="back-link">
+                <a href="index.html">
+                    ⬅ Voltar ao Sumário
+                </a>
+            </div>
+            <h1>Capítulo 5 – Atributos HTML</h1>
+            <h2>O que são atributos HTML?</h2>
+            <p>
+                Atributos HTML são informações adicionais que você pode adicionar às tags para 
+                configurar ou modificar o comportamento de um elemento. Eles sempre são colocados 
+                dentro da tag de abertura e seguem o formato:
+            </p>
+            <div class="prog-code">
+                <pre><code>&lt;elemento atributo="valor"&gt;</code></pre>
+            </div>
+            <h2>Tipos de atributos</h2>
+            <p>Os atributos podem ser:</p>
+            <ul>
+            <li><strong>Com valor:</strong> <b>href="..."</b>, <b>type="..."</b>, <b>src="..."</b></li>
+            <li><strong>Booleanos:</strong> <b>hidden</b>, <b>disabled</b>, <b>checked</b> (presentes ou ausentes)</li>
+            <li><strong>Globais:</strong> funcionam em quase todas as tags, como <b>id</b>, <b>class</b>, <b>style</b></li>
+            </ul>
+            <h2>Exemplo prático</h2>
+            <div class="prog-code">
+                <pre><code>
+                    &lt;button id="meuBotao" class="botao-verde" disabled&gt;
+                    Clique aqui
+                    &lt;/button&gt;
+                </code></pre>
+            </div>
+            <p>
+                Esse botão tem três atributos: <b>id</b>, <b>class</b> e <b>disabled</b>. 
+                Você pode usar o JavaScript para manipulá-los!
+            </p>
+            <h3>Manipulando atributos com JavaScript</h3>
+            <ul>
+                <li><b>element.getAttribute("class")</b> → obtém o valor do atributo</li>
+                <li><b>element.setAttribute("disabled", "")</b> → adiciona ou atualiza o atributo</li>
+                <li><b>element.removeAttribute("disabled")</b> → remove o atributo</li>
+            </ul>
+            <h2>Tabela de Atributos Comuns</h2>
+            <table>
+                <thead>
+                    <tr>
+                    <th>Atributo</th>
+                    <th>Função</th>
+                    <th>Exemplo</th>
+                    </tr>
+                </thead>
+            <tbody>
+                <tr>
+                    <td><b>href</b></td>
+                    <td>Define o link de um elemento &lt;a&gt;</td>
+                    <td><b>&lt;a href="site.com"&gt;</b></td>
+                </tr>
+                <tr>
+                <td><b>src</b></td>
+                    <td>Define a imagem ou script externo</td>
+                    <td><b>&lt;img src="logo.png"&gt;</b></td>
+                </tr>
+                <tr>
+                    <td><b>alt</b></td>
+                    <td>Texto alternativo para imagens</td>
+                    <td><b>&lt;img alt="Logo"&gt;</b></td>
+                </tr>
+                <tr>
+                    <td><b>id</b></td>
+                    <td>Identificador único</td>
+                    <td><b>&lt;div id="box"&gt;</b></td>
+                </tr>
+                <tr>
+                    <td><b>class</b></td>
+                    <td>Aplica estilos com CSS</td>
+                    <td><b>&lt;p class="aviso"&gt;</b></td>
+                </tr>
+                <tr>
+                <td><b>hidden</b></td>
+                <td>Oculta o elemento da página</td>
+                <td><b>&lt;section hidden&gt;</b></td>
+                </tr>
+                <tr>
+                    <td><b>disabled</b></td>
+                    <td>Desativa elementos interativos</td>
+                    <td><b>&lt;input disabled&gt;</b></td>
+                </tr>
+                <tr>
+                    <td><b>placeholder</b></td>
+                    <td>Texto de ajuda dentro de inputs</td>
+                    <td><b>&lt;input placeholder="Digite aqui"&gt;</b></td>
+                </tr>
+            </tbody>
+            </table>
+            <h2>Resumo</h2>
+            <ul>
+                <li>Os atributos adicionam funcionalidades ou comportamentos aos elementos HTML.</li>
+                <li>Alguns têm valor (como <b>href</b>), outros são booleanos (como <bhidden</b>).</li>
+                <li>Podem ser lidos e manipulados com JavaScript usando <b>getAttribute()</b>, <b>setAttribute()</b> e <b>removeAttribute()</code>.</li>
+            </ul>
+            <h2>Referências</h2>
+            <ul>
+            <li>
+                <a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">
+                W3schools – HTML Attributes
+                </a>
+            </li>
+            <li>
+                <a href="https://www.w3schools.com/tags/ref_attributes.asp" target="_blank">
+                W3Schools – Lista de Atributos
+                </a>
+            </li>
+            </ul>
+            <div class="back-link" style="margin-top: 30px;">
+                <a href="index.html">
+                    ⬅ Voltar ao Menu</a>
+            </div>
+        </div>
+    </body>
+</html>

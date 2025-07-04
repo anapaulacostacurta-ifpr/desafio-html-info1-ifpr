@@ -10,12 +10,14 @@ body {
 h1, h2, h3 {
     color: #005a9c;
 }
+
 code {
     color:#f9f9f9;
     padding: 2px 5px;
     border-radius: 3px;
     font-family: Consolas, monospace;
 }
+
 table {
     border-collapse: collapse;
     margin-top: 15px;
@@ -26,37 +28,51 @@ table, th, td {
     border: 1px solid #ccc;
     padding: 8px;
 }
+
 th {
     background-color: #005a9c;
     color: white;
 }
 
 tr:nth-child(even) {
-background-color: #f0f0f0;
+    background-color: #f0f0f0;
 }
+
 .highlight {
-background-color: #d1e7dd;
-font-weight: bold;
+    background-color: #d1e7dd;
+    font-weight: bold;
 }
 
 .back-link {
     margin-bottom: 20px;
     display: inline-block;
 }
+
 .back-link a {
     color: #005a9c;
     text-decoration: none;
     font-weight: bold;
 }
+
 .back-link a:hover {
     text-decoration: underline;
 }
+
 .box {
     background: white;
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
 }
+
+.box-1{
+    color:#f9f9f9;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
 .prog-code{
      background-color: black;
 }

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Capítulo 5 – Como usar o decodificador Base64</title>
+        <link rel="stylesheet" href="./style/style.css" />
+    </head>
+    <body>
+        <div class="box">
+            <div class="back-link">
+                <a href="index.html">
+                    ⬅ Voltar ao Sumário
+                </a>
+            </div>
+            <h1>Capítulo 5 – Como usar o decodificador Base64?</h1>
+            <h2>O que é Base64?</h2>
+            <p>
+                <strong>Base64</strong> é um sistema de codificação usado para representar 
+                dados em formato de texto, mesmo que esses dados originalmente não sejam texto. 
+                É muito comum na web para transferir imagens, arquivos ou strings "escondidas" 
+                em desafios e jogos digitais.
+            </p>
+            <h2>Para que serve?</h2>
+            <ul>
+                <li>Esconder mensagens simples ou dados temporários</li>
+                <li>Enviar dados binários como texto (em e-mails ou JSONs)</li>
+                <li>Criar enigmas ou senhas ocultas em jogos educacionais</li>
+            </ul>
+            <h2>Como decodificar?</h2>
+            <p>
+                Quando você encontra um código estranho como <b>Y29kaWdv</b>, isso pode ser 
+                Base64. Para descobrir o que está escrito, é preciso usar um 
+                <strong>decodificador</strong>.
+            </p>
+            <h2>Exemplo Prático</h2>
+            <div class="prog-code">
+                <pre>
+                    <code>
+                        Base64: Y29kaWdv
+                        Significado: codigo
+                    </code>
+                </pre>
+            </div>
+            <h2>Ferramentas para decodificar</h2>
+            <ul>
+            <li>
+                <a href="https://www.base64decode.org/" target="_blank">
+                🔓 base64decode.org (site simples e direto)
+                </a>
+            </li>
+            <li>
+                <a href="https://www.rapidtables.com/convert/number/base64-to-ascii.html" target="_blank">
+                🔄 RapidTables Base64 to Text
+                </a>
+            </li>
+            <h2>Explicação Técnica</h2>
+            <p>
+                O Base64 usa letras maiúsculas, minúsculas, números e os símbolos <b>+</b> e 
+                <b>/</b> para representar os dados. Por isso, é possível transformar qualquer 
+                coisa em uma string visível.
+            </p>
+            <table>
+            <thead>
+                <tr>
+                <th>Base64</th>
+                <th>Texto</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>dGVzdGU=</td><td>teste</td></tr>
+                <tr><td>cHJvamV0bw==</td><td>projeto</td></tr>
+                <tr><td>ZGVzYWZpbyBodG1s</td><td>desafio html</td></tr>
+                <tr><td>ZmFzZTE=</td><td>fase1</td></tr>
+            </tbody>
+            </table>
+            <h2>Dica para usar nos desafios</h2>
+            <p>
+                Quando encontrar algo que parece um código Base64, tente colar em um dos sites 
+                acima ou usar <b>atob()</b> no console do navegador:
+            </p>
+            <div class="prog-code">
+            <pre>
+                <code>
+                    atob("Y2hhbGxlbmdl") // Resultado: challenge
+                </code>
+            </pre>
+            </div>
+            <h2>Referência</h2>
+            <ul>
+            <li>
+                <a href="https://www.w3schools.com/jsref/met_win_atob.asp" target="_blank">
+                w3schools – Window atob()
+                </a>
+            </li>
+            <li>
+                <a href="https://www.base64decode.org/" target="_blank">
+                base64decode.org – Ferramenta online
+                </a>
+            </li>
+            </ul>
+            <div class="back-link" style="margin-top: 30px;">
+                <a href="index.html">
+                    ⬅ Voltar ao Menu
+                </a>
+            </div>
+        </div>
+    </body>
+</html>

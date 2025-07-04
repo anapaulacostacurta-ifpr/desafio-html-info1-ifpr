@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Capítulo 9 – Introdução ao JavaScript</title>
+        <link rel="stylesheet" href="../style/style.css" />
+    </head>
+    <body>
+        <div class="box">
+            <div class="back-link">
+                <a href="../index.html">
+                    ⬅ Voltar ao Sumário
+                </a>
+            </div>
+            <h1>Capítulo 1 – Introdução ao JavaScript</h1>
+            <h2>O que é JavaScript?</h2>
+            <p>
+                <strong>JavaScript</strong> é uma linguagem de programação que permite adicionar <strong>interatividade</strong> às páginas HTML. Com JavaScript, você pode responder a cliques de botões, validar formulários, alterar o conteúdo da página e muito mais.
+            </p>
+            <h2>Onde usar o JavaScript?</h2>
+            <ul>
+                <li>Dentro da própria página HTML (com a tag <b>&lt;script&gt;</b>)</li>
+                <li>Em arquivos externos (com extensão <b>.js</b>)</li>
+            </ul>
+            <h2>Primeiro exemplo</h2>
+            <p>Vamos mostrar uma mensagem ao usuário:</p>
+            <div class="prog-code">
+                <pre><code>
+                    &lt;script&gt;
+                    alert("Bem-vindo à minha página!");
+                    &lt;/script&gt;
+                </code></pre>
+            </div>
+            <h2>Inserindo JavaScript no HTML</h2>
+            <p>
+                Você pode colocar o código JavaScript diretamente no final do <b>&lt;body&gt;</b>, 
+            assim:
+            </p>
+            <div class="prog-code">
+                <pre><code>
+                    &lt;body&gt;
+                    &lt;h1&gt;Olá!&lt;/h1&gt;
+                    &lt;script&gt;
+                        console.log("Mensagem no console.");
+                    &lt;/script&gt;
+                    &lt;/body&gt;
+                </code></pre>
+            </div>
+            <h2>Comandos básicos</h2>
+            <ul>
+                <li><b>alert("texto")</b> → mostra uma janela pop-up</li>
+                <li><b>console.log("texto")</b> → escreve no console do navegador (F12)</li>
+                <li><b>document.getElementById()</b> → acessa elementos HTML pelo id</li>
+            </ul>
+            <h2>Exemplo interativo com botão</h2>
+            <p>HTML:</p>
+            <div class="prog-code">
+                <pre><code>
+                    &lt;b  utton onclick="mostrarAlerta()"&gt;Clique aqui&lt;/button&gt;
+                </code></pre>
+            </div>
+            <p>JavaScript:</p>
+            <div class="prog-code">
+                <pre><code>
+                    &lt;script&gt;
+                    function mostrarAlerta() {
+                        alert("Você clicou no botão!");
+                    }
+                    &lt;/script&gt;
+            </code></pre>
+            </div>
+            <h2>Diferente de Java</h2>
+            <p>Apesar do nome parecido, JavaScript e Java são linguagens diferentes. O JavaScript é usado principalmente em páginas web.</p>
+            <h2>Resumo</h2>
+            <ul>
+                <li>JavaScript torna páginas web interativas e dinâmicas.</li>
+                <li>Você pode escrever código dentro da tag <b>&lt;script&gt;</b>.</li>
+                <li>Comandos como <b>alert()</b> e <b>console.log()</b> ajudam a testar o código.</li>
+                <li>Eventos como cliques podem ser usados para disparar ações.</li>
+            </ul>
+            <h2>Referências</h2>
+            <ul>
+                <li>
+                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide" target="_blank">
+                    MDN Web Docs – Guia de JavaScript
+                    </a>
+                </li>
+            <li>
+                <a href="https://www.w3schools.com/js/" target="_blank">
+                W3Schools – JavaScript Tutorial
+                </a>
+            </li>
+            </ul>
+            <div class="back-link" style="margin-top: 30px;">
+                <a href="../index.html">
+                    ⬅ Voltar ao Menu
+                </a>
+            </div>
+        </div>
+    </body>
+</html>

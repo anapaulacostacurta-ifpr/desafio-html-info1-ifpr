@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Capítulo 6 – Caracteres Não Imprimíveis em HTML</title>
+        <link rel="stylesheet" href="./style/style.css" />
+    </head>
+    <body>
+        <div class="box">
+            <div class="back-link">
+            <a href="index.html">⬅ Voltar ao Sumário</a>
+            </div>
+            <h1>Capítulo 7 – Caracteres Não Imprimíveis em HTML</h1>
+            <h2>O que são caracteres não imprimíveis?</h2>
+            <p>
+            Em HTML, alguns símbolos têm um significado especial e não podem ser usados diretamente, 
+            pois fazem parte da própria linguagem. Por exemplo, o sinal <b>&lt;</b> é usado para 
+            abrir uma tag. Se quisermos exibir esse sinal na tela, precisamos usar uma 
+            "entidade HTML".
+            </p>
+            <h2>O que são entidades HTML?</h2>
+            <p>
+            As <strong>entidades HTML</strong> são códigos especiais usados para representar 
+            caracteres reservados ou símbolos que não podem ser digitados diretamente. 
+            Elas sempre começam com <b>&amp;</b> e terminam com <b>;</b>.
+            </p>
+            <h2>Exemplos comuns</h2>
+            <table>
+            <thead>
+                <tr>
+                <th>Entidade</th>
+                <th>Resultado</th>
+                <th>Uso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><b>&amp;lt;</b></td><td>&lt;</td><td>Sinal de menor que (usado para abrir tags)</td></tr>
+                <tr><td><b>&amp;gt;</b></td><td>&gt;</td><td>Sinal de maior que (usado para fechar tags)</td></tr>
+                <tr><td><b>&amp;amp;</b></td><td>&amp;</td><td>O próprio símbolo &amp;</td></tr>
+                <tr><td><b>&amp;quot;</b></td><td>"</td><td>Aspas duplas</td></tr>
+                <tr><td><b>&amp;nbsp;</b></td><td>&nbsp;</td><td>Espaço em branco que não quebra</td></tr>
+                <tr><td><b>&amp;copy;</b></td><td>&copy;</td><td>Símbolo de copyright</td></tr>
+                <tr><td><b>&amp;euro;</b></td><td>&euro;</td><td>Símbolo do Euro</td></tr>
+            </tbody>
+            </table>
+            <h2>Quando usar entidades?</h2>
+            <ul>
+                <li>Quando quiser exibir uma tag HTML no texto (ex: <b>&lt;p&gt;</b>)</li>
+                <li>Quando quiser mostrar símbolos especiais (&copy;, &euro;, etc.)</li>
+                <li>Quando precisar inserir múltiplos espaços seguidos (<b>&amp;nbsp;</b>)</li>
+            </ul>
+            <h2>Exemplo prático</h2>
+            <div class="prog-code">
+                <pre><code>
+                    &lt;p&gt;Use a tag &amp;lt;p&amp;gt; para criar parágrafos.&lt;/p&gt;
+                </code></pre>
+            </div>
+            <p>Resultado exibido na página:</p>
+            <div class="prog-code">
+                <p>Use a tag &lt;p&gt; para criar parágrafos.</p>
+            </div>
+            <h2>Resumo</h2>
+            <ul>
+                <li>Alguns símbolos não podem ser usados diretamente no HTML porque têm funções especiais.</li>
+                <li>As entidades HTML permitem exibir esses símbolos na página.</li>
+                <li>Sempre começam com <b>&amp;</b> e terminam com <b>;</b>.</li>
+            </ul>
+            <h2>Referência</h2>
+            <ul>
+            <li>
+                <a href="https://www.w3schools.com/html/html_entities.asp" target="_blank">
+                W3Schools – HTML Entities
+                </a>
+            </li>
+            </ul>
+
+            <div class="back-link" style="margin-top: 30px;">
+            <a href="index.html">⬅ Voltar ao Menu</a>
+            </div>
+        </div>
+    </body>
+</html>
