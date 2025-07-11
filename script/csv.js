@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
           <td>${aluno.atv3}</td>
           <td>-${aluno.resg}</td>
           <td>${aluno.atv4}</td>
+          <td>${aluno.quiz1}</td>
           <td class="highlight">${aluno.total_calculado}${foguinho}</td>
         `;
         tbody.appendChild(row);
