@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
       // Converte o CSV em um array de objetos com total calculado
       const ranking = lines.map(line => {
         const [email, atv1, atv2, atv3, resg, atv4, quiz1, total] = line.split(',').map(val => val.trim());
-        const total_calculado = (parseInt(atv1) || 0) + (parseInt(atv2) || 0) + (parseInt(atv3) || 0) + (parseInt(atv4) || 0) + (parseInt(quiz1) || 0) - (parseInt(resg) || 0);
+        const total_calculado = (parseInt(atv1) || 0) + (parseInt(atv2) || 0) + (parseInt(atv3) || 0) + (parseInt(atv4) || 0) + (parseInt(quiz1) || 0) + (parseInt(quiz2) || 0)- (parseInt(resg) || 0);
         console.log(total)
-        return { email, atv1, atv2, atv3, atv4, resg, quiz1, total_calculado, total };
+        return { email, atv1, atv2, atv3, atv4, resg, quiz1, quiz2,total_calculado, total };
       });
 
       // Ordena do maior para o menor total
@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
           <td>-${aluno.resg}</td>
           <td>${aluno.atv4}</td>
           <td>${aluno.quiz1}</td>
+          <td>${aluno.quiz2}</td>
           <td class="highlight">${aluno.total_calculado}${foguinho}</td>
         `;
         tbody.appendChild(row);
