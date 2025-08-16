@@ -63,9 +63,9 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
         tbody.appendChild(row);
         total_geral = total_geral + aluno.total_calculado;
       });
-      const row = document.createElement('tr')
-      row.innerHTML = <td>${total_geral}</td>
-      tbody.appendChild(row);
+      const row2 = document.createElement('tr')
+      row2.innerHTML = <td>${total_geral}</td>
+      tbody.appendChild(row2);
     })
     .catch(error => {
       console.error('Erro ao processar o CSV:', error);
