@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
         const [email, atv1, atv2, atv3, resg, atv4, atv5, atv6, atv7, atv8, quiz1, quiz2, resg2, total] = line.split(',').map(val => val.trim());
         const total_calculado = (parseInt(atv1) || 0) + (parseInt(atv2) || 0) + (parseInt(atv3) || 0) + (parseInt(atv4) || 0) + (parseInt(atv5) || 0) +(parseInt(atv6) || 0)+(parseInt(atv7) || 0)+(parseInt(atv8) || 0)+(parseInt(quiz1) || 0) + (parseInt(quiz2) || 0)- (parseInt(resg) || 0)- (parseInt(resg2) || 0);
         console.log(total)
-        return { email, atv1, atv2, atv3, atv4, atv5, atv6, atv7, avt8, resg, resg2, quiz1, quiz2,total_calculado, total};
+        return { email, atv1, atv2, atv3, atv4, atv5, atv6, atv7, atv8, resg, resg2, quiz1, quiz2,total_calculado, total};
       });
 
       // Ordena do maior para o menor total
