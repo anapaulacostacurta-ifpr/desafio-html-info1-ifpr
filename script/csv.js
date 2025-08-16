@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
         total_geral = total_geral + aluno.total_calculado;
       });
       const row2 = document.createElement('tr')
-      row2.innerHTML = <td>${total_geral}</td>
+      row2.innerHTML = `<td>${total_geral}</td>`;
       tbody.appendChild(row2);
     })
     .catch(error => {
