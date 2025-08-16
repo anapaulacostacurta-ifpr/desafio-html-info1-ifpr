@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
         }
 
         row.innerHTML = `
-          <td>${index}</td>
+          <td>${index+1}</td>
           <td>${aluno.email}</td>
           <td>${aluno.atv1}</td>
           <td>${aluno.atv2}</td>
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
         total_geral = total_geral + aluno.total_calculado;
       });
       const row2 = document.createElement('tr')
-      row2.innerHTML = `<td>${total_geral}</td>`;
+      row2.innerHTML = `<th rowspan="13">Total Geral</th><td>${total_geral}</td>`;
       tbody.appendChild(row2);
     })
     .catch(error => {
