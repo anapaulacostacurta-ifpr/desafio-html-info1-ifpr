@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
           <td>${aluno.atv1}</td>
           <td>${aluno.atv2}</td>
           <td>${aluno.atv3}</td>
-          <td>-${aluno.resg}</td>
           <td>${aluno.atv4}</td>
           <td>${aluno.atv5}</td>
           <td>${aluno.atv6}</td>
@@ -56,6 +55,7 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
           <td>${aluno.atv8}</td>
           <td>${aluno.quiz1}</td>
           <td>${aluno.quiz2}</td>
+          <td>-${aluno.resg}</td>
           <td>-${aluno.resg2}</td>
           <td class="highlight">${aluno.total_calculado}${foguinho}</td>
         `;
