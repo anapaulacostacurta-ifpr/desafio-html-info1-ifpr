@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
 
       // Ordena do maior para o menor total
       //ranking.sort((a, b) => b.total_calculado - a.total_calculado);
-
+      var total_geral = 0;
       // Monta cada linha da tabela
       ranking.forEach((aluno, index) => {
         var foguinho = index < 3 ? ' 🔥' : ''; // Top 3 com fogo
@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
         }
 
         row.innerHTML = `
+          <td>${index}</td>
           <td>${aluno.email}</td>
           <td>${aluno.atv1}</td>
           <td>${aluno.atv2}</td>
@@ -60,7 +61,11 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
           <td class="highlight">${aluno.total_calculado}${foguinho}</td>
         `;
         tbody.appendChild(row);
+        total_geral = total_geral + aluno.total_calculado;
       });
+      const row = document.createElement('tr')
+      row.innerHTML = <td>${total_geral}</td>
+      tbody.appendChild(row);
     })
     .catch(error => {
       console.error('Erro ao processar o CSV:', error);
