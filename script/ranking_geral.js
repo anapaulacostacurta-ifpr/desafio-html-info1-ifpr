@@ -1,9 +1,8 @@
- 
- // Função chamada automaticamente quando o script é carregado
+// Função chamada automaticamente quando o script é carregado
 document.addEventListener("DOMContentLoaded", carregarRanking);
 
  function carregarRanking() {
-  const csvPath = `${location.origin}/desafio-html-info1-ifpr/assets/ranking_info1_2025.csv`;
+  const csvPath = `${location.origin}/desafio-html-info1-ifpr/assets/ranking_geral.csv`;
 
   fetch(csvPath)
     .then(response => {
@@ -21,10 +20,10 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
 
       // Converte o CSV em um array de objetos com total calculado
       const ranking = lines.map(line => {
-        const [email, atv1, atv2, atv3, resg, atv4, quiz1, quiz2, atv5, atv6, atv7, atv8, resg2, total] = line.split(',').map(val => val.trim());
+        const [email, nickname, atv1, atv2, atv3, resg, atv4, quiz1, quiz2, atv5, atv6, atv7, atv8, resg2, total] = line.split(',').map(val => val.trim());
         const total_calculado = (parseInt(atv1) || 0) + (parseInt(atv2) || 0) + (parseInt(atv3) || 0) + (parseInt(atv4) || 0) + (parseInt(atv5) || 0) +(parseInt(atv6) || 0)+(parseInt(atv7) || 0)+(parseInt(atv8) || 0)+(parseInt(quiz1) || 0) + (parseInt(quiz2) || 0)- (parseInt(resg) || 0)- (parseInt(resg2) || 0);
         console.log(total)
-        return { email, atv1, atv2, atv3, atv4, atv5, atv6, atv7, atv8, resg, resg2, quiz1, quiz2,total_calculado, total};
+        return { email, nickname, atv1, atv2, atv3, atv4, atv5, atv6, atv7, atv8, resg, resg2, quiz1, quiz2,total_calculado, total};
       });
 
       // Ordena do maior para o menor total
@@ -45,7 +44,7 @@ document.addEventListener("DOMContentLoaded", carregarRanking);
 
         row.innerHTML = `
           <td>${index+1}</td>
-          <td>${aluno.email}</td>
+          <td><img src="./images/avatar/${aluno.nickname}.png" alt="Avatar"> <br> ${aluno.nickname}</td>
           <td>${aluno.atv1}</td>
           <td>${aluno.atv2}</td>
           <td>${aluno.atv3}</td>
