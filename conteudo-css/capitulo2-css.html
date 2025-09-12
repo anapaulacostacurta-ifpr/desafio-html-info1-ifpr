@@ -47,28 +47,30 @@
 
     <h3 id="catalogo">1.4.5 Exemplo de Estrutura de Catálogo</h3>
     <p>Uma estrutura simples e modular para HTML/CSS:</p>
-    <pre><code>project-folder/
-├─ index.html                ← página inicial
-├─ about/                    ← seção “Sobre”
-│  ├─ about.html
-│  └─ about.css
-├─ services/                 ← seção “Serviços”
-│  ├─ services.html
-│  └─ services.css
-├─ contact/                  ← seção “Contato”
-│  ├─ contact.html
-│  └─ contact.css
-├─ css/
-│  └─ styles.css             ← folha principal (global)
-├─ js/
-│  └─ script.js              ← scripts
-├─ images/
-│  ├─ logo.png
-│  └─ banner.jpg
-└─ fonts/
-   ├─ font1.ttf
-   └─ font2.woff
-</code></pre>
+    <div class="prog-code">
+        <pre><code>project-folder/
+    ├─ index.html                ← página inicial
+    ├─ about/                    ← seção “Sobre”
+    │  ├─ about.html
+    │  └─ about.css
+    ├─ services/                 ← seção “Serviços”
+    │  ├─ services.html
+    │  └─ services.css
+    ├─ contact/                  ← seção “Contato”
+    │  ├─ contact.html
+    │  └─ contact.css
+    ├─ css/
+    │  └─ styles.css             ← folha principal (global)
+    ├─ js/
+    │  └─ script.js              ← scripts
+    ├─ images/
+    │  ├─ logo.png
+    │  └─ banner.jpg
+    └─ fonts/
+      ├─ font1.ttf
+      └─ font2.woff
+    </code></pre>
+  </div>div>
     <p>Essa estrutura separa arquivos por tipo/função e organiza o site em diretórios por seção,
       facilitando manutenção e evolução.</p>
 
@@ -81,6 +83,7 @@
       pelo navegador, mas <strong>visíveis no código-fonte</strong>.</p>
 
     <h3 id="how-comments">1.6.2 Como Criar Comentários</h3>
+    <div class="prog-code">
     <pre><code>/* Este é um comentário de uma linha */
 selector {
   property: value; /* Comentário ao lado de uma declaração */
@@ -91,12 +94,14 @@ selector {
   útil para blocos maiores de explicação.
 */
 </code></pre>
+</div>
 
     <h3 id="why-comments">1.6.3 Por que Usar Comentários</h3>
     <ul>
       <li><strong>Documentar decisões</strong> (ex.: “aumentar fonte do &lt;h1&gt; por acessibilidade”).</li>
       <li><strong>Desativar trechos</strong> temporariamente durante testes.</li>
     </ul>
+        <div class="prog-code">
     <pre><code>/* Desativando regras temporariamente:
 h1 {
   font-size: 24px;
@@ -104,6 +109,7 @@ h1 {
 }
 */
 </code></pre>
+</div>
     <p><strong>Boas práticas:</strong> explique o essencial, evite óbvio, atualize comentários ao
       alterar código e mantenha um tom profissional.</p>
 
@@ -116,15 +122,17 @@ h1 {
 
     <h3 id="element">1.7.2 Seletor de Elemento (tipo)</h3>
     <p>Alveja todas as ocorrências de uma tag.</p>
+       <div class="prog-code">
     <pre><code>/* todos os parágrafos ficam vermelhos */
 p { color: red; }
 
 /* múltiplos elementos com as mesmas regras */
 h1, h2, p { color: #333; }
 </code></pre>
-
+</div>
     <h3 id="class">1.7.3 Seletor de Classe</h3>
     <p>Aplica estilos a elementos com o atributo <code>class</code>. Usa-se com “.” (ponto).</p>
+    <div class="prog-code">
     <pre><code>/* CSS */
 .button {
   background-color: blue;
@@ -135,7 +143,7 @@ h1, h2, p { color: #333; }
 &lt;button class="button"&gt;Enviar&lt;/button&gt;
 &lt;a class="button" href="#"&gt;Link estilizado&lt;/a&gt;
 </code></pre>
-
+</div>
     <h3 id="id">1.7.4 Seletor de ID</h3>
     <p>Aponta um único elemento com <code>id</code> único por página. Usa-se com “#”.</p>
     <pre><code>/* CSS */
@@ -146,6 +154,7 @@ h1, h2, p { color: #333; }
 
 /* HTML */
 &lt;div id="header"&gt;Cabeçalho&lt;/div&gt;
+<div class="prog-code"></div>
 </code></pre>
     <p><strong>Dica:</strong> use classes para estilização recorrente e IDs para ancoragens,
       acessibilidade ou ganchos específicos. IDs têm <strong>maior especificidade</strong> que classes.</p>
@@ -167,7 +176,7 @@ h1, h2, p { color: #333; }
 /* sufixo */
 [src$=".png"] { border: 1px solid #000; }
 </code></pre>
-
+</body>div>
     <h3 id="advanced">1.7.6 Pseudo-classes, Pseudo-elementos e Combinadores</h3>
     <ul>
       <li><strong>Pseudo-classes</strong> (ex.: <code>:hover</code>, <code>:focus</code>) – estados dinâmicos.</li>
@@ -196,6 +205,7 @@ h1, h2, p { color: #333; }
 
     <h3 id="inheritance">1.8.4 Herança</h3>
     <p>Algumas propriedades (tipografia e cor) são herdadas pelos filhos; layout normalmente não.</p>
+   <div class="prog-code">
     <pre><code>/* CSS */
 .parent {
   font-family: Arial, sans-serif;
@@ -209,8 +219,9 @@ h1, h2, p { color: #333; }
   &lt;p&gt;Este parágrafo herda fonte e tamanho.&lt;/p&gt;
 &lt;/div&gt;
 </code></pre>
-
+</div>
     <h3 id="override">1.8.5 Sobrescrevendo Propriedades Herdadas</h3>
+    <div class="prog-code">
     <pre><code>/* herdado da .parent: font-family e (inicialmente) font-size */
 .parent { font-family: Arial, sans-serif; font-size: 16px; }
 
@@ -220,7 +231,7 @@ p {
   color: green;   /* (correto) – &quot;font-color&quot; não existe em CSS */
 }
 </code></pre>
-
+</div>
     <h3 id="important">1.8.6 Controlando Estilo com <code>!important</code></h3>
     <pre><code>.heading { color: blue !important; }</code></pre>
     <p><strong>Use com moderação.</strong> Pode ser útil para sobrepor estilos de UA ou
@@ -228,26 +239,6 @@ p {
       especificidade bem planejadas; se usar, <strong>documente o motivo</strong>.</p>
 
     <hr>
-
-    <h2>1.9 Encerramento do Módulo 1</h2>
-
-    <h3 id="wrapup">1.9.1 Fechamento</h3>
-    <p>Você viu: organização de CSS (global vs. híbrido), comentários, seletores (elemento, classe,
-      ID, atributo), noções de pseudo-classes/pseudo-elementos/combinadores e os pilares de
-      cascade, especificidade e herança.</p>
-
-    <h3 id="lab">1.9.2 Projeto do Módulo 1 (Lab)</h3>
-    <ol>
-      <li>Inclua CSS via inline, interno e externo.</li>
-      <li>Estruture pastas conforme a seção 1.4.5.</li>
-      <li>Crie regras usando todos os tipos de seletores apresentados.</li>
-      <li>Experimente conflitos de estilo e resolva-os com especificidade (evite <code>!important</code>).</li>
-      <li>Comente seu CSS explicando 2 decisões de design.</li>
-    </ol>
-
-    <h3 id="test">1.9.3 Teste do Módulo 1</h3>
-    <p>Após o lab, responda um quiz curto para verificar o entendimento. Revise pontos em que houver
-      dúvidas e reforce a prática.</p>
 
       <div class="back-link" style="margin-top: 30px;">
           <a href="../index.html">
