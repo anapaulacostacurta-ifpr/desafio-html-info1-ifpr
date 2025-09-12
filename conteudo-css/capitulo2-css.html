@@ -131,7 +131,7 @@ h1, h2, p { color: #333; }
 </code></pre>
 </div>
     <h3 id="class">1.7.3 Seletor de Classe</h3>
-    <p>Aplica estilos a elementos com o atributo <code>class</code>. Usa-se com “.” (ponto).</p>
+    <p>Aplica estilos a elementos com o atributo <b>class</b>. Usa-se com “.” (ponto).</p>
     <div class="prog-code">
     <pre><code>/* CSS */
 .button {
@@ -145,7 +145,8 @@ h1, h2, p { color: #333; }
 </code></pre>
 </div>
     <h3 id="id">1.7.4 Seletor de ID</h3>
-    <p>Aponta um único elemento com <code>id</code> único por página. Usa-se com “#”.</p>
+    <p>Aponta um único elemento com <b>id</b> único por página. Usa-se com “#”.</p>
+    <div class="prog-code">
     <pre><code>/* CSS */
 #header {
   font-size: 24px;
@@ -156,11 +157,13 @@ h1, h2, p { color: #333; }
 &lt;div id="header"&gt;Cabeçalho&lt;/div&gt;
 <div class="prog-code"></div>
 </code></pre>
+</div>
     <p><strong>Dica:</strong> use classes para estilização recorrente e IDs para ancoragens,
       acessibilidade ou ganchos específicos. IDs têm <strong>maior especificidade</strong> que classes.</p>
 
     <h3 id="attr">1.7.5 Seletores de Atributo</h3>
     <p>Estilizam com base na presença/valor de atributos.</p>
+    <div class="prog-code"></div>
     <pre><code>/* qualquer elemento com data-highlight */
 [data-highlight] { background: yellow; }
 
@@ -176,7 +179,8 @@ h1, h2, p { color: #333; }
 /* sufixo */
 [src$=".png"] { border: 1px solid #000; }
 </code></pre>
-</body>div>
+</div>
+</body>
     <h3 id="advanced">1.7.6 Pseudo-classes, Pseudo-elementos e Combinadores</h3>
     <ul>
       <li><strong>Pseudo-classes</strong> (ex.: <code>:hover</code>, <code>:focus</code>) – estados dinâmicos.</li>
