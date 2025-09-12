@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Capítulo 2 - Organização de arquivos CSS, comentários e seletores</title>
+  <!-- usa o mesmo estilo do projeto -->
+  <link rel="stylesheet" href="../style/style.css"/>
+</head>
+<body>
+  <div class="box">
+        <div class="back-link">
+            <a href="../index.html">
+                ⬅ Voltar ao Sumário
+            </a>
+        </div>
+    <h1>🎨 CSS – Capítulo 2</h1>
+    <p>Este capítulo aprofunda a organização de arquivos CSS, comentários, seletores e os
+      princípios de <em>cascade</em>, <em>specificity</em> e herança. Ao final, há um
+      <strong>lab</strong> e um <strong>teste</strong> para consolidar o aprendizado.</p>
+
+    <hr>
+
+    <h2>1.4 Organização de Arquivos CSS</h2>
+
+    <h3 id="global-css">1.4.3 Um Único Arquivo CSS Global</h3>
+    <h4>Vantagens</h4>
+    <ul>
+      <li><strong>Centralização</strong> – todos os estilos ficam em um único arquivo, favorecendo consistência e reduzindo duplicação.</li>
+      <li><strong>Carregamento mais rápido</strong> – o navegador pode <em>cachear</em> um só arquivo, melhorando o tempo de carregamento.</li>
+      <li><strong>Simplicidade</strong> – para projetos pequenos, gerenciar um arquivo é mais simples.</li>
+    </ul>
+    <h4>Cuidados</h4>
+    <ul>
+      <li><strong>Organização</strong> – à medida que o projeto cresce, manter seções e componentes separados dentro do mesmo arquivo pode ficar difícil.</li>
+      <li><strong>Conflitos</strong> – uma alteração global pode afetar páginas/partes não previstas.</li>
+    </ul>
+
+    <h3 id="hybrid">1.4.4 Abordagem Híbrida</h3>
+    <p>Mantenha estilos comuns em um CSS global e, para áreas complexas ou páginas específicas, crie
+      folhas de estilo separadas. Assim, você equilibra <strong>reuso</strong> (global) e
+      <strong>modularidade</strong> (por seção).</p>
+    <p><strong>Regra prática:</strong> projetos grandes tendem a se beneficiar de CSS por seção/
+      componente; projetos menores ganham com um arquivo único para consistência.</p>
+    <p>Sempre avalie <strong>escalabilidade</strong>, <strong>legibilidade</strong> e
+      <strong>colaboração</strong> ao decidir.</p>
+
+    <h3 id="catalogo">1.4.5 Exemplo de Estrutura de Catálogo</h3>
+    <p>Uma estrutura simples e modular para HTML/CSS:</p>
+    <pre><code>project-folder/
+├─ index.html                ← página inicial
+├─ about/                    ← seção “Sobre”
+│  ├─ about.html
+│  └─ about.css
+├─ services/                 ← seção “Serviços”
+│  ├─ services.html
+│  └─ services.css
+├─ contact/                  ← seção “Contato”
+│  ├─ contact.html
+│  └─ contact.css
+├─ css/
+│  └─ styles.css             ← folha principal (global)
+├─ js/
+│  └─ script.js              ← scripts
+├─ images/
+│  ├─ logo.png
+│  └─ banner.jpg
+└─ fonts/
+   ├─ font1.ttf
+   └─ font2.woff
+</code></pre>
+    <p>Essa estrutura separa arquivos por tipo/função e organiza o site em diretórios por seção,
+      facilitando manutenção e evolução.</p>
+
+    <hr>
+
+    <h2>1.6 Comentários em CSS</h2>
+
+    <h3 id="intro-comments">1.6.1 Introdução</h3>
+    <p>Comentários documentam o CSS, explicam decisões e orientam quem lê o código. Eles são ignorados
+      pelo navegador, mas <strong>visíveis no código-fonte</strong>.</p>
+
+    <h3 id="how-comments">1.6.2 Como Criar Comentários</h3>
+    <pre><code>/* Este é um comentário de uma linha */
+selector {
+  property: value; /* Comentário ao lado de uma declaração */
+}
+
+/*
+  Comentário de múltiplas linhas:
+  útil para blocos maiores de explicação.
+*/
+</code></pre>
+
+    <h3 id="why-comments">1.6.3 Por que Usar Comentários</h3>
+    <ul>
+      <li><strong>Documentar decisões</strong> (ex.: “aumentar fonte do &lt;h1&gt; por acessibilidade”).</li>
+      <li><strong>Desativar trechos</strong> temporariamente durante testes.</li>
+    </ul>
+    <pre><code>/* Desativando regras temporariamente:
+h1 {
+  font-size: 24px;
+  color: red;
+}
+*/
+</code></pre>
+    <p><strong>Boas práticas:</strong> explique o essencial, evite óbvio, atualize comentários ao
+      alterar código e mantenha um tom profissional.</p>
+
+    <hr>
+
+    <h2>1.7 Seletores: Alvejando Elementos HTML</h2>
+
+    <h3 id="types">1.7.1 Tipos de Seletores</h3>
+    <p>Seletores definem <em>o que</em> será estilizado. Conhecer seus tipos é fundamental.</p>
+
+    <h3 id="element">1.7.2 Seletor de Elemento (tipo)</h3>
+    <p>Alveja todas as ocorrências de uma tag.</p>
+    <pre><code>/* todos os parágrafos ficam vermelhos */
+p { color: red; }
+
+/* múltiplos elementos com as mesmas regras */
+h1, h2, p { color: #333; }
+</code></pre>
+
+    <h3 id="class">1.7.3 Seletor de Classe</h3>
+    <p>Aplica estilos a elementos com o atributo <code>class</code>. Usa-se com “.” (ponto).</p>
+    <pre><code>/* CSS */
+.button {
+  background-color: blue;
+  color: white;
+}
+
+/* HTML */
+&lt;button class="button"&gt;Enviar&lt;/button&gt;
+&lt;a class="button" href="#"&gt;Link estilizado&lt;/a&gt;
+</code></pre>
+
+    <h3 id="id">1.7.4 Seletor de ID</h3>
+    <p>Aponta um único elemento com <code>id</code> único por página. Usa-se com “#”.</p>
+    <pre><code>/* CSS */
+#header {
+  font-size: 24px;
+  color: green;
+}
+
+/* HTML */
+&lt;div id="header"&gt;Cabeçalho&lt;/div&gt;
+</code></pre>
+    <p><strong>Dica:</strong> use classes para estilização recorrente e IDs para ancoragens,
+      acessibilidade ou ganchos específicos. IDs têm <strong>maior especificidade</strong> que classes.</p>
+
+    <h3 id="attr">1.7.5 Seletores de Atributo</h3>
+    <p>Estilizam com base na presença/valor de atributos.</p>
+    <pre><code>/* qualquer elemento com data-highlight */
+[data-highlight] { background: yellow; }
+
+/* correspondência exata */
+[data-highlight="true"] { background: yellow; }
+
+/* contém substring */
+[class*="button"] { border: 1px solid #000; }
+
+/* prefixo */
+[href^="https://"] { color: blue; }
+
+/* sufixo */
+[src$=".png"] { border: 1px solid #000; }
+</code></pre>
+
+    <h3 id="advanced">1.7.6 Pseudo-classes, Pseudo-elementos e Combinadores</h3>
+    <ul>
+      <li><strong>Pseudo-classes</strong> (ex.: <code>:hover</code>, <code>:focus</code>) – estados dinâmicos.</li>
+      <li><strong>Pseudo-elementos</strong> (ex.: <code>::before</code>, <code>::after</code>) – partes do conteúdo.</li>
+      <li><strong>Combinadores</strong>:
+        <code>espaco</code> (descendentes),
+        <code>&gt;</code> (filhos diretos),
+        <code>+</code> (irmão adjacente).</li>
+    </ul>
+    <p>Veja mais em MDN Web Docs quando quiser se aprofundar.</p>
+
+    <hr>
+
+    <h2>1.8 Cascade, Specificity e Herança</h2>
+
+    <h3 id="principles">1.8.1 Visão Geral</h3>
+    <p>Esses princípios determinam como regras entram em vigor quando há conflitos.</p>
+
+    <h3 id="cascade">1.8.2 A Cascade do CSS</h3>
+    <p>Quando regras conflitam, o navegador considera a origem (autor/usuário/UA), a ordem de
+      declaração e a especificidade. De forma geral: <strong>inline</strong> &gt; <strong>ID</strong> &gt; <strong>classe/atributo/pseudo-classe</strong> &gt; <strong>elemento</strong>.</p>
+
+    <h3 id="specificity">1.8.3 Especificidade</h3>
+    <p>Quanto mais específico o seletor, maior a prioridade. Ex.:
+      <code>#header</code> vence <code>.header</code> se houver conflito.</p>
+
+    <h3 id="inheritance">1.8.4 Herança</h3>
+    <p>Algumas propriedades (tipografia e cor) são herdadas pelos filhos; layout normalmente não.</p>
+    <pre><code>/* CSS */
+.parent {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+/* HTML */
+&lt;div class="parent"&gt;
+  &lt;p&gt;Este parágrafo herda fonte e tamanho.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+    <h3 id="override">1.8.5 Sobrescrevendo Propriedades Herdadas</h3>
+    <pre><code>/* herdado da .parent: font-family e (inicialmente) font-size */
+.parent { font-family: Arial, sans-serif; font-size: 16px; }
+
+/* o p abaixo sobrescreve o font-size e a cor */
+p {
+  font-size: 20px;
+  color: green;   /* (correto) – &quot;font-color&quot; não existe em CSS */
+}
+</code></pre>
+
+    <h3 id="important">1.8.6 Controlando Estilo com <code>!important</code></h3>
+    <pre><code>.heading { color: blue !important; }</code></pre>
+    <p><strong>Use com moderação.</strong> Pode ser útil para sobrepor estilos de UA ou
+      bibliotecas de terceiros, mas o excesso dificulta manutenção. Prefira estrutura e
+      especificidade bem planejadas; se usar, <strong>documente o motivo</strong>.</p>
+
+    <hr>
+
+    <h2>1.9 Encerramento do Módulo 1</h2>
+
+    <h3 id="wrapup">1.9.1 Fechamento</h3>
+    <p>Você viu: organização de CSS (global vs. híbrido), comentários, seletores (elemento, classe,
+      ID, atributo), noções de pseudo-classes/pseudo-elementos/combinadores e os pilares de
+      cascade, especificidade e herança.</p>
+
+    <h3 id="lab">1.9.2 Projeto do Módulo 1 (Lab)</h3>
+    <ol>
+      <li>Inclua CSS via inline, interno e externo.</li>
+      <li>Estruture pastas conforme a seção 1.4.5.</li>
+      <li>Crie regras usando todos os tipos de seletores apresentados.</li>
+      <li>Experimente conflitos de estilo e resolva-os com especificidade (evite <code>!important</code>).</li>
+      <li>Comente seu CSS explicando 2 decisões de design.</li>
+    </ol>
+
+    <h3 id="test">1.9.3 Teste do Módulo 1</h3>
+    <p>Após o lab, responda um quiz curto para verificar o entendimento. Revise pontos em que houver
+      dúvidas e reforce a prática.</p>
+
+      <div class="back-link" style="margin-top: 30px;">
+          <a href="../index.html">
+              ⬅ Voltar ao Menu
+          </a>
+      </div>
+  </div>
+</body>
+</html>

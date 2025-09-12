@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Capítulo 1 – Introdução ao CSS</title>
+    <!-- Mantém o mesmo estilo do projeto -->
+    <link rel="stylesheet" href="../style/style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <div class="back-link">
+        <a href="../index.html">
+            ⬅ Voltar ao Sumário
+        </a>
+      </div>
+      <h1>🎨 Capítulo 1 – Introdução ao CSS</h1>
+      <p>
+        O <strong>CSS (Cascading Style Sheets)</strong> define a apresentação das páginas HTML:
+        cores, fontes, espaçamentos, tamanhos e posicionamento. Entender como incluir CSS no seu
+        projeto é o primeiro passo para criar sites organizados e bonitos.
+      </p>
+      <hr>
+      <h2>1.2 Incluindo CSS em uma Página Web</h2>
+      <p>
+        Há três formas principais de aplicar CSS: <strong>estilos inline</strong>,
+        <strong>estilos internos</strong> e <strong>folhas de estilo externas</strong>. Abaixo,
+        você verá como e quando usar cada uma.
+      </p>
+      <h3 id="inline">1.2.1 Estilos Inline</h3>
+      <p>
+        Aplicados diretamente no elemento HTML pelo atributo <b>style</b>. Úteis para
+        ajustes pontuais, porém dificultam manutenção em projetos maiores.
+      </p>
+       <div class="prog-code"><pre><code>&lt;p style="color: blue;"&gt;Olá, CSS!&lt;/p&gt;</code></pre></div>
+
+      <h3 id="interno">1.2.2 Estilos Internos</h3>
+      <p>
+        Definidos no próprio arquivo HTML, dentro da tag <b>&lt;style&gt;</b> no
+        <b>&lt;head&gt;</b>. Indicados para páginas únicas ou protótipos rápidos.
+      </p>
+      <div class="prog-code">
+          <pre><code>
+            &lt;head&gt;
+              &lt;style&gt;
+                  p {
+                    color: red;
+                  }
+              &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;p&gt;Olá, CSS!&lt;/p&gt;
+            &lt;/body&gt;
+          </code></pre>
+      </div>
+
+      <h3 id="externo">1.2.3 Folhas de Estilo Externas</h3>
+      <p>
+        O CSS fica em um arquivo separado (<b>.css</b>) e é “linkado” no
+        <b>&lt;head&gt;</b>. É a abordagem mais usada em sites profissionais por facilitar
+        a reutilização e a padronização.
+      </p>
+      <div style="margin-bottom: .5rem;"><strong>index.html</strong></div>
+      <div class="prog-code">
+        <pre><code>
+          &lt;head&gt;
+          &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;/head&gt;
+        </code></pre>
+      </div>
+      <div style="margin-bottom: .5rem;"><strong>styles.css</strong></div>
+      <div class="prog-code">
+          <pre><code>
+          p {
+            color: green;
+          }
+          </code></pre>
+        </div>
+
+      <h3>1.2.4 Prós e Contras</h3>
+      <ul>
+        <li><strong>Inline</strong>: rápido e pontual, mas mistura conteúdo e apresentação.</li>
+        <li><strong>Interno</strong>: centraliza estilos na página, porém pouco escalável.</li>
+        <li><strong>Externo</strong>: organizado e reutilizável, porém exige carregar um arquivo a mais.</li>
+      </ul>
+
+      <h3>Conclusão</h3>
+      <p>
+        Escolha conforme o tamanho e a complexidade do projeto. Para sites com múltiplas páginas,
+        prefira <strong>folhas de estilo externas</strong>.
+      </p>
+
+      <hr>
+
+      <h2>🔗 Referência</h2>
+      <p>
+        Conteúdo inspirado no currículo da Cisco Networking Academy
+      </p>
+
+      <hr>
+
+      <div class="back-link" style="margin-top: 30px;">
+          <a href="../index.html">
+              ⬅ Voltar ao Menu
+          </a>
+      </div>
+    </div>
+  </body>
+</html>

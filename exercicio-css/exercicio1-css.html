@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CTF – Capture the Flag (Web)</title>
+  <!-- Reutiliza o mesmo estilo do projeto -->
+  <link rel="stylesheet" href="../style/style.css" />
+  <style>
+    .css-badge {
+      display: inline-block;
+      padding: .4rem .7rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: #fafafa;
+      cursor: help;
+      position: relative;
+      margin-left: .25rem;
+    }
+    .css-badge:hover::after {
+      content: 'IFPR{HOVER-TO-REVEAL}';
+      position: absolute;
+      left: 0; right: 0;
+      top: 110%;
+      display: block;
+      padding: .4rem .6rem;
+      background: #fff3cd;
+      border: 1px solid #ffeeba;
+      color: #856404;
+      border-radius: 6px;
+      white-space: nowrap;
+      transform: translateY(4px);
+      box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    }
+
+    /* Área de progresso simples */
+    .progress {
+      height: 10px;
+      background: #eee;
+      border-radius: 6px;
+      overflow: hidden;
+      margin: .75rem 0 1rem;
+    }
+    .progress > .bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #7c4dff, #00c853);
+      transition: width .3s ease;
+    }
+
+    #inlineFlag {
+      display: none;
+      margin-top: .5rem;
+      padding: .4rem .6rem;
+      background: #eef7ff;
+      border: 1px dashed #90caf9;
+      border-radius: 6px;
+    }
+
+    .data-stash {
+      width: 1px; height: 1px; opacity: 0; overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>🏴‍☠️ Exercicio 1 - CTF – Capture the Flag (Web)</h1>
+    <p>
+      Encontre <strong>6 flags</strong> escondidas nesta página usando HTML, CSS, JavaScript,
+      DevTools e um pouquinho de curiosidade. O formato das flags é
+      <code>IFPR{...}</code>. Digite cada flag e clique em <em>Validar</em>.
+    </p>
+
+    <div class="progress" aria-label="Progresso">
+      <div class="bar" id="progressBar"></div>
+    </div>
+    <p><strong>Progresso:</strong> <span id="foundCount">0</span>/6 encontradas</p>
+
+    <div style="display:flex; gap:.5rem; align-items:center; margin:.75rem 0;">
+      <input id="flagInput" type="text" placeholder="Digite a flag aqui (ex.: IFPR{EXEMPLO})" style="flex:1;"/>
+      <button id="checkBtn">Validar</button>
+      <button id="hintBtn" class="secondary">Dica</button>
+    </div>
+
+    <details style="margin:.5rem 0;">
+      <summary><strong>Desafios & Dicas</strong> (clique para expandir)</summary>
+      <ol style="margin-top:.5rem;">
+        <li><strong>Inline</strong> – Algo pode ser <em>revelado</em>… procure um botão por perto.</li>
+        <li><strong>View Source</strong> – Às vezes, o <em>código-fonte</em> fala (e comenta 👀).</li>
+        <li><strong>Cifra</strong> – VSCE{EBG13-QRPBQRQ-GUVF} (dica: ROT13).</li>
+        <li><strong>CSS</strong> – Passe o mouse neste badge:
+          <span class="css-badge" title="Dica: :hover e ::after">CSS-Hover</span>
+        </li>
+        <li><strong>Console</strong> – Abra o console do navegador (Ctrl+Shift+I ou F12).</li>
+        <li><strong>Data-*</strong> – Dados “guardados” em atributos também contam histórias…</li>
+      </ol>
+    </details>
+
+    <hr>
+
+    <h2>Área de Interação</h2>
+    <p>
+      <button id="revealInlineBtn">Revelar pista 1</button>
+      <span id="inlineFlag" style="color:#0d47a1;">
+        IFPR{INLINE-STYLE-IS-POWERFUL}
+      </span>
+    </p>
+
+    <h3>Flags encontradas</h3>
+    <ul id="foundList"></ul>
+
+    <div class="data-stash"
+         id="dataStash"
+         data-flag="IFPR{DATA-ATTRIBUTES-ARE-HANDY}">
+    </div>
+
+    <!-- FLAG 2 escondida em comentário do HTML:
+         IFPR{SOURCE-VIEW-WARRIOR}
+    -->
+
+    <p style="margin-top:1.5rem;">
+      <a href="index.html">⬅ Voltar para a página inicial</a>
+    </p>
+  </div>
+
+  <script src="../script/ctf.js"></script>
+</body>
+</html>
