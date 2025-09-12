@@ -9,7 +9,6 @@ const FLAGS = [
   "IFPR{DATA-ATTRIBUTES-ARE-HANDY}"     // Flag 6 – data-attribute
 ];
 
-print("Você abriu Consele FLAG5: IFPR{OPEN-CONSOLE-CTRL-SHIFT-I}");
 const progressBar = document.getElementById('progressBar');
 const foundCountEl = document.getElementById('foundCount');
 const foundList = document.getElementById('foundList');
