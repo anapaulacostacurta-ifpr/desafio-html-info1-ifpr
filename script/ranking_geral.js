@@ -84,8 +84,9 @@ function carregarRankingIndividual(aluno, index) {
     <td>${aluno.atv8}</td>
     <td>${aluno.quiz1}</td>
     <td>${aluno.quiz2}</td>
-    <td>-${aluno.resg}</td>
+    <td>-${aluno.resg1}</td>
     <td>-${aluno.resg2}</td>
+    <td>-${aluno.resg3}</td>
     <td class="highlight">${aluno.total_calculado}</td>
   `;
   return row;
@@ -196,18 +197,19 @@ function carregarRanking() {
 
           <table style="width:100%; border-collapse:collapse;">
             <tbody>
-              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">ATV 1</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv1)}</td></tr>
-              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">ATV 2</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv2)}</td></tr>
-              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">ATV 3</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv3)}</td></tr>
-              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">ATV 4</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv4)}</td></tr>
-              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">ATV 5</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv5)}</td></tr>
-              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">ATV 6</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv6)}</td></tr>
-              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">ATV 7</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv7)}</td></tr>
-              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">ATV 8</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv8)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 1</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv1)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 2</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv2)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 3</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv3)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 4</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv4)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 5</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv5)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 6</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv6)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 7</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv7)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 8</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv8)}</td></tr>
               <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Quiz 1</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.quiz1)}</td></tr>
               <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Quiz 2</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.quiz2)}</td></tr>
-              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Resgates (1)</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">-${toInt(aluno.resg)}</td></tr>
-              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Resgates (2)</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">-${toInt(aluno.resg2)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Resgate Doces</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">-${toInt(aluno.resg1)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Resgate Coletivo (1)</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">-${toInt(aluno.resg2)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Resgate Madeleine</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">-${toInt(aluno.resg3)}</td></tr>
               <tr><td style="padding:6px 8px;border-top:2px solid #ddd;font-weight:700;">Total de Pontos</td><td style="padding:6px 8px;border-top:2px solid #ddd;font-weight:700;">${toInt(aluno.total_pontos_calculado)}</td></tr>
               <tr><td style="padding:6px 8px;font-weight:700;">Total de Resgates</td><td style="padding:6px 8px;font-weight:700;">${toInt(aluno.total_resgate_calculado)}</td></tr>
               <tr><td style="padding:6px 8px;border-top:2px solid #000;font-weight:800;">Total Final</td><td style="padding:6px 8px;border-top:2px solid #000;font-weight:800;">${toInt(aluno.total_calculado)}</td></tr>
