@@ -191,7 +191,6 @@ function carregarRanking() {
                  style="width:64px;height:64px;object-fit:cover;border-radius:50%;border:1px solid #eee;">
             <div>
               <div style="font-weight:700; font-size:1.05rem;">${aluno.nickname}</div>
-              <div style="color:#555;">${aluno.email || ''}</div>
             </div>
           </div>
 

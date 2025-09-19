@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <title>CTF: DIVs em HTML</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../style/style-ctf-div.css">
+        <link rel="stylesheet" href="../style/style.css">
+        <!-- FLAG #1 (inspecione o código-fonte) -->
+        <!-- IFPR{DIV-SOURCE-VIEW} -->
+    </head>
+    <body>
+        <div class="box">
+            <div class="wrap container">
+                <div class="title">
+                    <div class="logo" aria-hidden="true"></div>
+                    <div>
+                        <h1>CTF: Dominando &lt;div&gt; no HTML</h1>
+                        <p class="sub">Encontre todas as flags mexendo com <b>div</b>, estilos, 
+                            atributos, acessibilidade e ferramentas do dev 🚀</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>Como jogar</h2>
+                    <p>Existem <b>8 flags</b> no formato <b>IFPR{DIV-...}</b>. 
+                        Explore a página, passe o mouse, clique, inspecione o código, abra o console 
+                        (Ctrl/Cmd+Shift+I), modifique classes no DevTools… 
+                        Depois cole as flags no verificador.</p>
+                    <div class="progress" aria-label="Progresso">
+                        <div id="bar" class="bar" style="width:0%"></div>
+                    </div>
+                    <ul id="foundList" class="foundlist"></ul>
+                    <div class="verify">
+                        <input id="flagInput" type="text" placeholder="Cole a flag aqui (ex.: IFPR{DIV-HOVER-REVEAL})" autocomplete="off" />
+                        <button id="btnCheck">Verificar</button>
+                    </div>
+                    <div id="msg" class="msg"></div>
+                </div>
+                <div class="grid" style="margin-top:16px">
+                <div class="card">
+                    <h2>Desafio 1 — :hover + pseudo-elemento</h2>
+                    <p>Passe o mouse sobre a caixa para revelar texto gerado por <code>::after</code>.</p>
+                    <div class="hoverbox">Passe o mouse aqui</div>
+                </div>
+                <div class="card">
+                    <h2>Desafio 2 — :target com âncora</h2>
+                    <p>Clique no link para “abrir” um <code>&lt;div id="secreto"&gt;</code> escondido via CSS.</p>
+                    <p><a href="#secreto">Abrir #secreto</a> • <a href="#">Fechar</a></p>
+                    <div id="secreto">Div secreto aberto via <code>:target</code> ✅</div>
+                </div>
+                <div class="card">
+                    <h2>Desafio 3 — Variável CSS vinda do inline style</h2>
+                    <p>Este bloco usa <code>content: var(--flag)</code> via CSS. A “flag” é injetada por um <code>style</code> no próprio <code>div</code>.</p>
+                    <div class="cssvar" style="--flag:'IFPR{DIV-CSS-VAR}'"></div>
+                </div>
+                <div class="card">
+                    <h2>Desafio 4 — Box model e tiles de &lt;div&gt;</h2>
+                    <p>Passe o mouse nas peças… uma delas tem um “segredo”.</p>
+                    <div class="tiles">
+                    <div class="tile"></div>
+                    <div class="tile flaghint" title="🤫"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>Desafio 5 — Div “botão” acessível</h2>
+                    <p>Um <code>&lt;div&gt;</code> com <code>role="button"</code> e <code>tabindex="0"</code> pode ser acionado com Enter/Espaço. Ele guarda uma flag em um <code>data-*</code>.</p>
+                    <div id="a11yBtn"
+                        class="btnlike"
+                        role="button"
+                        aria-label="Mostrar flag do data-attribute"
+                        tabindex="0"
+                        data-flag="IFPR{DIV-DATA-ATTRIBUTE}">
+                    Pressione Enter ou Espaço
+                    </div>
+                    <p class="hint">Dica: dá pra achar no DevTools também 😉</p>
+                </div>
+                <div class="card">
+                    <h2>Desafio 6 — Console + clique no bloco</h2>
+                    <p>Clique no bloco para “logar” algo no console do navegador.</p>
+                    <div id="debugBox" class="debug">Clique aqui e abra o console</div>
+                    <p class="hint">Console: Ctrl+Shift+I → aba “Console”.</p>
+                </div>
+                <div class="card">
+                    <h2>Desafio 7 — ROT13 dentro de um &lt;div&gt;</h2>
+                    <p>Decodifique o texto deste <code>div</code> (ROT13) para encontrar a flag.</p>
+                    <div id="rot13" class="pzl" data-rot="VSC E{QVI-EBG13-QRPBQRQ}">
+                        <h3>Mensagem:</h3>
+                        <div style="font-family:monospace; background:#0f1131; border:1px solid #2a2c5b; padding:8px; border-radius:8px">
+                        VSC E{QVI-EBG13-QRPBQRQ}
+                        </div>
+                        <p class="hint">Dica: selecione, copie e use um decodificador ROT13… ou escreva um JS rápido 😉</p>
+                    </div>
+                </div>
+                    <div class="card">
+                        <h2>Desafio 8 — Poder das classes</h2>
+                        <p>Alguns estilos só “aparecem” quando uma classe específica está presente. Adicione a classe <code>win</code> ao <code>.container</code> (este contêiner gigante da página) via DevTools.</p>
+                        <div class="win-badge">Estado atual: sem “win”</div>
+                        <p class="hint">No Elements/Inspector: clique em <code>&lt;div class="wrap container"&gt;</code> e edite a classe → <code>wrap container win</code>.</p>
+                    </div>
+                </div>
+                <div class="card" style="margin-top:16px">
+                    <h2>Flags encontradas (persistem no navegador)</h2>
+                    <p>As flags válidas ficam salvas no <code>localStorage</code> deste domínio.</p>
+                </div>
+                <!-- CARD FINAL: aparece quando todas as flags forem encontradas -->
+                <!-- CARD FINAL: Google Forms -->
+                <div id="finishCard" class="card" style="margin-top:16px">
+                    <h2>Finalização 🎉</h2>
+                    <p class="hint">Parabéns! Você encontrou todas as flags. Envie seu nickname para registrar a conclusão.</p>
+
+                    <!-- ⚠️ Substitua o action pelo seu formResponse -->
+                    <form id="finishForm"
+                            action="https://docs.google.com/forms/d/e/1FAIpQLSdRk46DBB5sIki-aVF58wNvMlQQTORHd4KYjio8lKYd52t3MA/formResponse"
+                            method="post"
+                            target="hidden_gform">
+
+                        <!-- ⚠️ Substitua os name="entry.XXXXX" pelos IDs do seu formulário -->
+                        <label for="nickname">Nickname</label>
+                        <input id="nickname"
+                            name="entry.1582078614"
+                            type="text"
+                            placeholder="ex.: inf3-aluna-joana"
+                            required
+                            style="margin:.4rem 0 0.6rem; width:100%; background:#0f1131; border:1px solid #34386f; color:#fff; padding:.6rem .7rem; border-radius:10px;">
+
+                        <!-- Campos ocultos preenchidos via JS -->
+                        <input type="hidden" id="totalFlags" name="entry.1820780495">
+                        <textarea id="flagsField" name="entry.293899559" hidden></textarea>
+                        <input type="hidden" id="completedAt" name="entry.1526192225" hidden>
+                        
+
+                        <button type="submit">Enviar confirmação</button>
+                        <div class="mini">O envio é feito diretamente para o Google Forms (sem sair da página).</div>
+                    </form>
+
+                    <!-- Iframe oculto para evitar redirecionar a página ao enviar -->
+                    <iframe name="hidden_gform" style="display:none;"></iframe>
+                    <div id="finishThanks">✅ Registro enviado! Você pode fechar esta página.</div>
+            </div>
+            
+            <div class="back-link" style="margin-top: 30px;">
+                <a href="../index.html">
+                    ⬅ Voltar ao Menu
+                </a>
+            </div>
+        </div>
+        <script src="../script/ctf-div.js"></script>
+    </body>
+</html>
