@@ -140,6 +140,7 @@
           alert("Digite um e-mail válido.");
         }
       });
+      render();
     }
 
     async function carregarFlags() {
@@ -159,4 +160,4 @@
     carregarFlags();
 
     // Render inicial + restaura progresso
-    render();
+    
