@@ -112,13 +112,11 @@
                     <h2>Finalização 🎉</h2>
                     <p class="hint">Parabéns! Você encontrou todas as flags. Envie seu nickname para registrar a conclusão.</p>
 
-                    <!-- ⚠️ Substitua o action pelo seu formResponse -->
                     <form id="finishForm"
                             action="https://docs.google.com/forms/d/e/1FAIpQLSdRk46DBB5sIki-aVF58wNvMlQQTORHd4KYjio8lKYd52t3MA/formResponse"
                             method="post"
                             target="hidden_gform">
 
-                        <!-- ⚠️ Substitua os name="entry.XXXXX" pelos IDs do seu formulário -->
                         <label for="nickname">Nickname</label>
                         <input id="nickname"
                             name="entry.1582078614"
@@ -126,13 +124,21 @@
                             placeholder="ex.: inf3-aluna-joana"
                             required
                             style="margin:.4rem 0 0.6rem; width:100%; background:#0f1131; border:1px solid #34386f; color:#fff; padding:.6rem .7rem; border-radius:10px;">
+                        <label for="email">E-mail</label>
+
+                        <input id="email"
+                            name="entry.1682951554"
+                            type="email"
+                            placeholder="seuemail@exemplo.com"
+                            required
+                            style="margin:.4rem 0 0.6rem; width:100%;
+                                    background:#0f1131; border:1px solid #34386f;
+                                    color:#fff; padding:.6rem .7rem; border-radius:10px;">
 
                         <!-- Campos ocultos preenchidos via JS -->
                         <input type="hidden" id="totalFlags" name="entry.1820780495">
                         <textarea id="flagsField" name="entry.293899559" hidden></textarea>
                         <input type="hidden" id="completedAt" name="entry.1526192225" hidden>
-                        
-
                         <button type="submit">Enviar confirmação</button>
                         <div class="mini">O envio é feito diretamente para o Google Forms (sem sair da página).</div>
                     </form>

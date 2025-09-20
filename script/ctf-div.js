@@ -1,18 +1,8 @@
 
-// =========================
+    // =========================
     // CONFIGURAÇÃO DO CTF
     // =========================
-    const FLAGS = [
-      "IFPR{DIV-SOURCE-VIEW}",
-      "IFPR{DIV-HOVER-REVEAL}",
-      "IFPR{DIV-TARGET-OPENED}",
-      "IFPR{DIV-CSS-VAR}",
-      "IFPR{DIV-BOX-MODEL}",
-      "IFPR{DIV-DATA-ATTRIBUTE}",
-      "IFPR{DIV-CONSOLE-LOG}",
-      "IFPR{DIV-CLASS-POWER}",
-      "IFPR{DIV-ROT13-DECODED}"
-    ];
+    import FLAGS from '../assets/flags-div.json' assert { type: 'json' };
     const TOTAL_FLAGS = FLAGS.length;
 
     const KEY = "ctf_div_flags_v1";
@@ -147,6 +137,13 @@
         }, 600);
       });
     }
+    document.getElementById('finishForm').addEventListener('submit', function (e) {
+      const email = document.getElementById('email').value.trim();
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+        e.preventDefault();
+        alert("Digite um e-mail válido.");
+      }
+    });
 
     // Render inicial + restaura progresso
     render();
