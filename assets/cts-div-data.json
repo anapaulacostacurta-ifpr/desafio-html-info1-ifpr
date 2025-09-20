@@ -1,0 +1,23 @@
+{
+  "flags": [
+    "IFPR{DIV-SOURCE-VIEW}",
+    "IFPR{DIV-HOVER-REVEAL}",
+    "IFPR{DIV-TARGET-OPENED}",
+    "IFPR{DIV-CSS-VAR}",
+    "IFPR{DIV-BOX-MODEL}",
+    "IFPR{DIV-DATA-ATTRIBUTE}",
+    "IFPR{DIV-CONSOLE-LOG}",
+    "IFPR{DIV-CLASS-POWER}",
+    "IFPR{DIV-ROT13-DECODED}"
+  ],
+  "steps": [
+    { "id": "step1", "flag": "IFPR{DIV-HOVER-REVEAL}" },
+    { "id": "step2", "flag": "IFPR{DIV-TARGET-OPENED}" },
+    { "id": "step3", "flag": "IFPR{DIV-CSS-VAR}" },
+    { "id": "step4", "flag": "IFPR{DIV-BOX-MODEL}" },
+    { "id": "step5", "flag": "IFPR{DIV-DATA-ATTRIBUTE}" },
+    { "id": "step6", "flag": "IFPR{DIV-CONSOLE-LOG}" },
+    { "id": "step7", "flag": "IFPR{DIV-ROT13-DECODED}" },
+    { "id": "step8", "flag": "IFPR{DIV-CLASS-POWER}" }
+  ]
+}

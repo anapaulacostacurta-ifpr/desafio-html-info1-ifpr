@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../style/style.css">
         <!-- FLAG #1 (inspecione o código-fonte) -->
         <!-- IFPR{DIV-SOURCE-VIEW} -->
+
     </head>
     <body>
         <div class="box">
@@ -37,23 +38,23 @@
                     <div id="msg" class="msg"></div>
                 </div>
                 <div class="grid" style="margin-top:16px">
-                <div class="card">
+                <div class="card step-card" id="step1">
                     <h2>Desafio 1 — :hover + pseudo-elemento</h2>
                     <p>Passe o mouse sobre a caixa para revelar texto gerado por <code>::after</code>.</p>
                     <div class="hoverbox">Passe o mouse aqui</div>
                 </div>
-                <div class="card">
+                <div class="card step-card" id="step2">
                     <h2>Desafio 2 — :target com âncora</h2>
                     <p>Clique no link para “abrir” um <code>&lt;div id="secreto"&gt;</code> escondido via CSS.</p>
                     <p><a href="#secreto">Abrir #secreto</a> • <a href="#">Fechar</a></p>
                     <div id="secreto">Div secreto aberto via <code>:target</code> ✅</div>
                 </div>
-                <div class="card">
+                <div class="card step-card" id="step3">
                     <h2>Desafio 3 — Variável CSS vinda do inline style</h2>
                     <p>Este bloco usa <code>content: var(--flag)</code> via CSS. A “flag” é injetada por um <code>style</code> no próprio <code>div</code>.</p>
                     <div class="cssvar" style="--flag:'IFPR{DIV-CSS-VAR}'"></div>
                 </div>
-                <div class="card">
+                <div class="card step-card" id="step4">
                     <h2>Desafio 4 — Box model e tiles de &lt;div&gt;</h2>
                     <p>Passe o mouse nas peças… uma delas tem um “segredo”.</p>
                     <div class="tiles">
@@ -65,7 +66,7 @@
                     <div class="tile"></div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card step-card" id="step5">
                     <h2>Desafio 5 — Div “botão” acessível</h2>
                     <p>Um <code>&lt;div&gt;</code> com <code>role="button"</code> e <code>tabindex="0"</code> pode ser acionado com Enter/Espaço. Ele guarda uma flag em um <code>data-*</code>.</p>
                     <div id="a11yBtn"
@@ -78,13 +79,13 @@
                     </div>
                     <p class="hint">Dica: dá pra achar no DevTools também 😉</p>
                 </div>
-                <div class="card">
+                <div class="card step-card" id="step6">
                     <h2>Desafio 6 — Console + clique no bloco</h2>
                     <p>Clique no bloco para “logar” algo no console do navegador.</p>
                     <div id="debugBox" class="debug">Clique aqui e abra o console</div>
                     <p class="hint">Console: Ctrl+Shift+I → aba “Console”.</p>
                 </div>
-                <div class="card">
+                <div class="card step-card" id="step7">
                     <h2>Desafio 7 — ROT13 dentro de um &lt;div&gt;</h2>
                     <p>Decodifique o texto deste <code>div</code> (ROT13) para encontrar a flag.</p>
                     <div id="rot13" class="pzl" data-rot="VSC E{QVI-EBG13-QRPBQRQ}">
@@ -95,7 +96,7 @@
                         <p class="hint">Dica: selecione, copie e use um decodificador ROT13… ou escreva um JS rápido 😉</p>
                     </div>
                 </div>
-                    <div class="card">
+                    <div class="card step-card" id="step8">
                         <h2>Desafio 8 — Poder das classes</h2>
                         <p>Alguns estilos só “aparecem” quando uma classe específica está presente. Adicione a classe <code>win</code> ao <code>.container</code> (este contêiner gigante da página) via DevTools.</p>
                         <div class="win-badge">Estado atual: sem “win”</div>
