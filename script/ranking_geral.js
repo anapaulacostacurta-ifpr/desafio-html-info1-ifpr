@@ -126,7 +126,7 @@ function carregarRanking() {
           toInt(atv5) + toInt(atv6) + toInt(atv7) + toInt(atv8) +
           toInt(quiz1) + toInt(quiz2);
 
-        const total_resgate_calculado = toInt(resg) + toInt(resg2), toInt(resg3);
+        const total_resgate_calculado = toInt(resg) + toInt(resg2)+ toInt(resg3);
 
         const total_calculado = total_pontos_calculado - total_resgate_calculado;
 
