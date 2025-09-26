@@ -24,8 +24,8 @@ const debugBox = document.getElementById('debugBox');
 // Estado em memória
 // =========================
 let FLAGS_ALL = [];
-let steps = [];   // vem direto do JSON
-let SEQUENCE = []; // flags em ordem de liberação
+let steps = [];   
+let SEQUENCE = []; 
 
 
 // =========================

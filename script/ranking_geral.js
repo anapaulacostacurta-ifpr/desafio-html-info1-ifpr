@@ -118,7 +118,7 @@ function carregarRanking() {
         // Atenção: mantém a ordem das colunas exatamente como no CSV
         const [
           email, nickname, atv1, atv2, atv3, resg,
-          atv4, quiz1, quiz2, atv5, atv6, atv7, atv8, resg2, total
+          atv4, quiz1, quiz2, atv5, atv6, atv7, atv8, resg2, resg3, total
         ] = line.split(',').map(val => val?.trim());
 
         const total_pontos_calculado =
@@ -126,7 +126,7 @@ function carregarRanking() {
           toInt(atv5) + toInt(atv6) + toInt(atv7) + toInt(atv8) +
           toInt(quiz1) + toInt(quiz2);
 
-        const total_resgate_calculado = toInt(resg) + toInt(resg2);
+        const total_resgate_calculado = toInt(resg) + toInt(resg2), toInt(resg3);
 
         const total_calculado = total_pontos_calculado - total_resgate_calculado;
 

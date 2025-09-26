@@ -5,8 +5,8 @@ async function boot_div(){
     const data = await resp.json();
 
     FLAGS_ALL = data.flags;
-    steps = data.steps;                // usa a lista de steps vinda do JSON
-    SEQUENCE = steps.map(s => s.flag); // flags que definem a ordem
+    steps = data.steps;                
+    SEQUENCE = steps.map(s => s.flag); 
 
   } catch(e){
     console.error(e);
