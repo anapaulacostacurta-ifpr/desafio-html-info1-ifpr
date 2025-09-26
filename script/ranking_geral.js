@@ -210,7 +210,7 @@ function carregarRanking() {
               <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Resgate Coletivo (1)</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">-${toInt(aluno.resg2)}</td></tr>
               <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Resgate Madeleine</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">-${toInt(aluno.resg3)}</td></tr>
               <tr><td style="padding:6px 8px;border-top:2px solid #ddd;font-weight:700;">Total de Pontos</td><td style="padding:6px 8px;border-top:2px solid #ddd;font-weight:700;">${toInt(aluno.total_pontos_calculado)}</td></tr>
-              <tr><td style="padding:6px 8px;font-weight:700;">Total de Resgates</td><td style="padding:6px 8px;font-weight:700;">${toInt(aluno.total_resgate_calculado)}</td></tr>
+              <tr><td style="padding:6px 8px;font-weight:700;">Total de Resgates</td><td style="padding:6px 8px;font-weight:700;">-${toInt(aluno.total_resgate_calculado)}</td></tr>
               <tr><td style="padding:6px 8px;border-top:2px solid #000;font-weight:800;">Total Final</td><td style="padding:6px 8px;border-top:2px solid #000;font-weight:800;">${toInt(aluno.total_calculado)}</td></tr>
             </tbody>
           </table>
