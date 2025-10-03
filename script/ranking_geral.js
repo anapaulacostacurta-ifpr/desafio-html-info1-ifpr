@@ -196,16 +196,20 @@ function carregarRanking() {
 
           <table style="width:100%; border-collapse:collapse;">
             <tbody>
-              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 1</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv1)}</td></tr>
-              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 2</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv2)}</td></tr>
-              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 3</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv3)}</td></tr>
-              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 4</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv4)}</td></tr>
-              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 5</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv5)}</td></tr>
-              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 6</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv6)}</td></tr>
-              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 7</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv7)}</td></tr>
-              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 8</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv8)}</td></tr>
-              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Quiz 1</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.quiz1)}</td></tr>
-              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Quiz 2</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.quiz2)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 1 - Como Criar o Repositório laboratorio-front-end no GitHub</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv1)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 2 - Passo a Passo: Publicando seu Site com GitHub Pages</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv2)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 3 - Criar arquivo index.html sem tags HTML</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv3)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 4 - Estrutura HTML com UTF-8</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv4)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 5 - Pesquisa, Criação e Revisão de Página HTML</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv5)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 6 - Checklist de Revisão da Página HTML do Colega</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv6)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 7 - EscapeRoom</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv7)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 8 - Investigador de Código HTML</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv8)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Quiz 1 - HMTML</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.quiz1)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Quiz 2 - Quiz Charada</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.quiz2)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 9 - Criação do Email Profissional</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv9)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 10 - Criação do Avatar e Nickname (20 IFPRPoints)</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv10)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 11 - CTF – Capture the Flag (Web) (20 IFPRPoints)</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv11)}</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 12 - [CSS] Estilos Inline (10 IFPRPoints)</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${toInt(aluno.atv12)}</td></tr>
               <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Resgate Doces</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">-${toInt(aluno.resg1)}</td></tr>
               <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Resgate Coletivo (1)</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">-${toInt(aluno.resg2)}</td></tr>
               <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Resgate Madeleine</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">-${toInt(aluno.resg3)}</td></tr>
