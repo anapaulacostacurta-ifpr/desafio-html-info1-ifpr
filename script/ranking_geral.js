@@ -171,12 +171,12 @@ async function carregarRanking() {
   RANKING_CACHE.sort((a, b) => b.total_calculado - a.total_calculado);
 
   // 8. Inserir na Tabela (lógica de renderização ajustada)
-  const tbody = document.querySelector('#rankingTable tbody');
-  if (!tbody) {
+  const rankingTable = document.querySelector('#rankingTable');
+  if (!rankingTable) {
     document.querySelector('#rankingTable')?.insertAdjacentHTML('afterend', '<p style="color: red;">❌ Tabela com ID "rankingTable" não encontrada.</p>');
     return;
   }
-  tbody.innerHTML = ''; // Limpa conteúdo anterior
+  rankingTable.innerHTML = ''; // Limpa conteúdo anterior
 
   let total_geral = 0;
 
