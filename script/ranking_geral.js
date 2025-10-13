@@ -192,8 +192,7 @@ async function carregarRanking() {
 
   // Cria o corpo (<tbody>) para receber as linhas de dados
   const tbody = document.createElement('tbody');
-  rankingTable.appendChild(tbody);
-
+  
   let total_geral = 0;
 
   RANKING_CACHE.forEach((aluno, index) => {
@@ -207,15 +206,6 @@ async function carregarRanking() {
     }
 
     row.innerHTML = `
-      <thead>
-        <tr>
-            <th>N.</th>
-            <th>Player</th>
-            <th>Pontos</th>
-            <th>Resgates</th>
-            <th>Total</th>
-        </tr>
-      </thead>
       <td>${index + 1}</td>
       <td>
         <img src="./images/avatar/${aluno.nickname}.png" alt="Avatar" style="width:40px;height:40px;object-fit:cover;border-radius:50%;"><br>
@@ -228,9 +218,11 @@ async function carregarRanking() {
       <td>-${aluno.total_resgate_calculado}</td>
       <td class="highlight">${aluno.total_calculado}${foguinho}</td>
     `;
-    rankingTable.appendChild(row);
+    tbody.appendChild(row);
     total_geral += aluno.total_calculado;
   });
+
+  rankingTable.appendChild(tbody);
 
   // Linha de Total Geral (ajusta colspan de acordo com o nº de colunas exibidas)
   const row2 = document.createElement('tr');
