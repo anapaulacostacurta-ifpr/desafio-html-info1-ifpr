@@ -127,7 +127,7 @@ async function carregarRanking() {
 
   // 3. Adicionar dados do Quiz (assumindo [email, nickname, quiz1, quiz2])
   data_quiz.forEach(line => {
-    const [email, nickname, quiz1, quiz2] = line;
+    const [email, quiz1, quiz2] = line;
     const aluno = alunosMap.get(email);
     if (aluno) {
       aluno.quiz1 = toInt(quiz1);
@@ -140,28 +140,28 @@ async function carregarRanking() {
   // Obs: O código original tinha resg, resg2, quiz1, quiz2. Ajustado para resg1, resg3, resg4 (Doces, Madeleine, Balas Lua Cheia)
   data_resgate_individual.forEach(line => {
     // Adapte os índices conforme a estrutura real do seu CSV de resgate individual
-    const [email, resg1, resg3, resg4] = line; 
+    const [email, resg1, resg2, resg3] = line; 
     const aluno = alunosMap.get(email);
     if (aluno) {
       aluno.resg1 = toInt(resg1); // Resgate Doces
-      aluno.resg3 = toInt(resg3); // Resgate Madeleine
-      aluno.resg4 = toInt(resg4); // Resgate Balas Lua Cheia
+      aluno.resg3 = toInt(resg2); // Resgate Madeleine
+      aluno.resg4 = toInt(resg3); // Resgate Balas Lua Cheia
     }
   });
 
   // 5. Adicionar dados de Resgate Coletivo (assumindo [email, resg2])
   data_resgate_coletivo.forEach(line => {
     // Adapte o índice conforme a estrutura real do seu CSV de resgate coletivo
-    const [email, resg2] = line; 
+    const [email, resg_col_1] = line; 
     const aluno = alunosMap.get(email);
     if (aluno) {
-      aluno.resg2 = toInt(resg2); // Resgate Coletivo (1)
+      aluno.resg2 = toInt(resg_col_1); // Resgate Coletivo (1)
     }
   });
   
   // 6. Finalizar cálculo e construir RANKING_CACHE
   RANKING_CACHE = Array.from(alunosMap.values()).map(aluno => {
-    aluno.total_resgate_calculado = aluno.resg1 + aluno.resg2 + aluno.resg3 + aluno.resg4;
+    aluno.total_resgate_calculado = aluno.resg1 + aluno.resg2 + aluno.resg3 + aluno.resg_col_1;
     // O total_pontos_calculado já inclui quiz
     aluno.total_calculado = aluno.total_pontos_calculado - aluno.total_resgate_calculado;
     return aluno;
