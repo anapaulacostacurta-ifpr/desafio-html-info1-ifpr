@@ -88,7 +88,7 @@ async function carregarRanking() {
     atividades: `${basePath}/atividades/points_atividades.csv`,
     quiz: `${basePath}/atividades/points_quiz.csv`,
     resgate_coletivo: `${basePath}/resgates/resgate_coletivo.csv`,
-    resgate_individual: `${basePath}/resgates/resgate_indivdual.csv`,
+    resgate_individual: `${basePath}/resgates/resgate_individual.csv`,
   };
 
   // 1. Carregar todos os dados
