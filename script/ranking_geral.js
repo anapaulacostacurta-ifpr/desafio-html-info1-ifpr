@@ -211,11 +211,11 @@ async function carregarRanking() {
   const row2 = document.createElement('tr');
   row2.style.fontWeight = 'bold';
   row2.innerHTML = `<td colspan="4" style="text-align:right;">Total Geral</td><td class="highlight">${total_geral}</td>`;
-  tbody.appendChild(row2);
+  rankingTable.appendChild(row2);
 
   // 9. Listener único para abrir modal ao clicar no nickname (mantido)
-  tbody.removeEventListener('click', handleNicknameClick); // Remove o antigo se existir
-  tbody.addEventListener('click', handleNicknameClick);
+  rankingTable.removeEventListener('click', handleNicknameClick); // Remove o antigo se existir
+  rankingTable.addEventListener('click', handleNicknameClick);
 }
 
 // Função de Callback para o Listener de clique no nickname
