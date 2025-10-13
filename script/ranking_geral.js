@@ -177,6 +177,23 @@ async function carregarRanking() {
     return;
   }
   rankingTable.innerHTML = ''; // Limpa conteúdo anterior
+  // Cria e insere o cabeçalho (<thead>)
+  const thead = document.createElement('thead');
+  thead.innerHTML = `
+    <tr>
+      <th>N.</th>
+      <th>Player</th>
+      <th>Pontos</th>
+      <th>Resgates</th>
+      <th>Total</th>
+    </tr>
+  `;
+  rankingTable.appendChild(thead);
+
+  // Cria o corpo (<tbody>) para receber as linhas de dados
+  const tbody = document.createElement('tbody');
+  rankingTable.appendChild(tbody);
+
   let total_geral = 0;
 
   RANKING_CACHE.forEach((aluno, index) => {
