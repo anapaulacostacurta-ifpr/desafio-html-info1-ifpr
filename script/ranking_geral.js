@@ -203,7 +203,7 @@ async function carregarRanking() {
       <td>-${aluno.total_resgate_calculado}</td>
       <td class="highlight">${aluno.total_calculado}${foguinho}</td>
     `;
-    tbody.appendChild(row);
+    rankingTable.appendChild(row);
     total_geral += aluno.total_calculado;
   });
 
