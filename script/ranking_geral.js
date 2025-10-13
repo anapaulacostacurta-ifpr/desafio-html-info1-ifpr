@@ -144,8 +144,8 @@ async function carregarRanking() {
     const aluno = alunosMap.get(email);
     if (aluno) {
       aluno.resg1 = toInt(resg1); // Resgate Doces
-      aluno.resg3 = toInt(resg2); // Resgate Madeleine
-      aluno.resg4 = toInt(resg3); // Resgate Balas Lua Cheia
+      aluno.resg2 = toInt(resg2); // Resgate Madeleine
+      aluno.resg3 = toInt(resg3); // Resgate Balas Lua Cheia
     }
   });
 
@@ -155,7 +155,7 @@ async function carregarRanking() {
     const [email, resg_col_1] = line; 
     const aluno = alunosMap.get(email);
     if (aluno) {
-      aluno.resg2 = toInt(resg_col_1); // Resgate Coletivo (1)
+      aluno.resg_col_1 = toInt(resg_col_1); // Resgate Coletivo (1)
     }
   });
   
