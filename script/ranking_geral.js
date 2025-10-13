@@ -177,7 +177,6 @@ async function carregarRanking() {
     return;
   }
   rankingTable.innerHTML = ''; // Limpa conteúdo anterior
-
   let total_geral = 0;
 
   RANKING_CACHE.forEach((aluno, index) => {
@@ -191,6 +190,15 @@ async function carregarRanking() {
     }
 
     row.innerHTML = `
+      <thead>
+        <tr>
+            <th>N.</th>
+            <th>Player</th>
+            <th>Pontos</th>
+            <th>Resgates</th>
+            <th>Total</th>
+        </tr>
+      </thead>
       <td>${index + 1}</td>
       <td>
         <img src="./images/avatar/${aluno.nickname}.png" alt="Avatar" style="width:40px;height:40px;object-fit:cover;border-radius:50%;"><br>
