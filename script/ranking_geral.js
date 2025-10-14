@@ -118,7 +118,7 @@ async function carregarRanking() {
       atv9: toInt(atv9), atv10: toInt(atv10), atv11: toInt(atv11), atv12: toInt(atv12),
       atv13: toInt(atv13), atv14: toInt(atv14),
       quiz1: 0, quiz2: 0,
-      resg1: 0, resg2: 0, resg3: 0, resg4: 0,
+      resg1: 0, resg2: 0, resg3: 0, resg_col_1: 0,
       total_pontos_calculado: pontos_atividades,
       total_resgate_calculado: 0,
       total_calculado: pontos_atividades,
