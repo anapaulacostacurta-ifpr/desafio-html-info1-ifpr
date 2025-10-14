@@ -1,9 +1,3 @@
-// === Utilidades ===
-function toInt(v) {
-  // Garante número inteiro (inclusive negativos), caindo para 0
-  const n = parseInt(String(v).replace(/[^\d-]/g, ''), 10);
-  return isNaN(n) ? 0 : n;
-}
 
 // Cria/garante estrutura do modal apenas uma vez
 function ensureModal() {
@@ -113,10 +107,10 @@ async function carregarRanking() {
 
     alunosMap.set(email, {
       email, nickname,
-      atv1: toInt(atv1), atv2: toInt(atv2), atv3: toInt(atv3), atv4: toInt(atv4),
-      atv5: toInt(atv5), atv6: toInt(atv6), atv7: toInt(atv7), atv8: toInt(atv8),
-      atv9: toInt(atv9), atv10: toInt(atv10), atv11: toInt(atv11), atv12: toInt(atv12),
-      atv13: toInt(atv13), atv14: toInt(atv14),
+      atv1: parseFloat(atv1), atv2: parseFloat(atv2), atv3: parseFloat(atv3), atv4: parseFloat(atv4),
+      atv5: parseFloat(atv5), atv6: parseFloat(atv6), atv7: parseFloat(atv7), atv8: parseFloat(atv8),
+      atv9: parseFloat(atv9), atv10: parseFloat(atv10), atv11: parseFloat(atv11), atv12: parseFloat(atv12),
+      atv13: parseFloat(atv13), atv14: parseFloat(atv14),
       quiz1: 0, quiz2: 0,
       resg1: 0, resg2: 0, resg3: 0, resg_col_1: 0,
       total_pontos_calculado: pontos_atividades,
@@ -130,8 +124,8 @@ async function carregarRanking() {
     const [email, quiz1, quiz2] = line;
     const aluno = alunosMap.get(email);
     if (aluno) {
-      aluno.quiz1 = toInt(quiz1);
-      aluno.quiz2 = toInt(quiz2);
+      aluno.quiz1 = parseFloat(quiz1);
+      aluno.quiz2 = parseFloat(quiz2);
       aluno.total_pontos_calculado += aluno.quiz1 + aluno.quiz2;
     }
   });
@@ -143,9 +137,9 @@ async function carregarRanking() {
     const [email, resg1, resg2, resg3] = line; 
     const aluno = alunosMap.get(email);
     if (aluno) {
-      aluno.resg1 = toInt(resg1); // Resgate Doces
-      aluno.resg2 = toInt(resg2); // Resgate Madeleine
-      aluno.resg3 = toInt(resg3); // Resgate Balas Lua Cheia
+      aluno.resg1 = parseFloat(resg1); // Resgate Doces
+      aluno.resg2 = parseFloat(resg2); // Resgate Madeleine
+      aluno.resg3 = parseFloat(resg3); // Resgate Balas Lua Cheia
     }
   });
 
@@ -155,7 +149,7 @@ async function carregarRanking() {
     const [email, resg_col_1] = line; 
     const aluno = alunosMap.get(email);
     if (aluno) {
-      aluno.resg_col_1 = toInt(resg_col_1); // Resgate Coletivo (1)
+      aluno.resg_col_1 = parseFloat(resg_col_1); // Resgate Coletivo (1)
     }
   });
   
