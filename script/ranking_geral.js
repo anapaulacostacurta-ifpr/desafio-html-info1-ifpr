@@ -103,7 +103,7 @@ async function carregarRanking() {
     ] = line;
 
     // Inicializa a pontuação base (apenas atividades)
-    const pontos_atividades = [atv1, atv2, atv3, atv4, atv5, atv6, atv7, atv8, atv9, atv10, atv11, atv12, atv13, atv14].reduce((sum, val) => sum + toInt(val), 0);
+    const pontos_atividades = [atv1, atv2, atv3, atv4, atv5, atv6, atv7, atv8, atv9, atv10, atv11, atv12, atv13, atv14].reduce((sum, val) => sum + parseFloat(val), 0);
 
     alunosMap.set(email, {
       email, nickname,
