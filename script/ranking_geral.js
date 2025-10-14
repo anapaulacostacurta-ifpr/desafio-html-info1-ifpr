@@ -266,9 +266,9 @@ function handleNicknameClick(e) {
         <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Atividade 14 - [CSS] Estilos Externo (10 IFPRPoints)</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">${aluno.atv14}</td></tr>
         
         <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Resgate Doces</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">-${aluno.resg1}</td></tr>
-        <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Resgate Coletivo (1)</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">-${aluno.resg2}</td></tr>
-        <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Resgate Madeleine</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">-${aluno.resg3}</td></tr>
-        <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Resgate Balas Lua Cheia</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">-${aluno.resg4}</td></tr>
+        <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Resgate Coletivo (1)</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">-${aluno.resg_col_1}</td></tr>
+        <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Resgate Madeleine</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">-${aluno.resg2}</td></tr>
+        <tr><td style="padding:6px 8px;border-bottom:1px solid #eee;">Resgate Balas Lua Cheia</td><td style="padding:6px 8px;border-bottom:1px solid #eee;">-${aluno.resg3}</td></tr>
         
         <tr><td style="padding:6px 8px;border-top:2px solid #ddd;font-weight:700;">Total de Pontos (Atividades + Quiz)</td><td style="padding:6px 8px;border-top:2px solid #ddd;font-weight:700;">${aluno.total_pontos_calculado}</td></tr>
         <tr><td style="padding:6px 8px;font-weight:700;">Total de Resgates (Subtraído)</td><td style="padding:6px 8px;font-weight:700;">-${aluno.total_resgate_calculado}</td></tr>
