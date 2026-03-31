@@ -53,19 +53,19 @@
         </thead>
         <tbody>
           <tr>
-            <td>Codificação</td>
+            <td><b>Codificação</b></td>
             <td>Conversão de caracteres em números que o computador entende</td>
           </tr>
           <tr>
-            <td>ASCII</td>
+            <td><b>ASCII</b></td>
             <td>Tabela antiga com suporte limitado a caracteres latinos</td>
           </tr>
           <tr>
-            <td>Unicode</td>
+            <td><b>Unicode</b></td>
             <td>Suporta múltiplos idiomas e símbolos especiais</td>
           </tr>
           <tr>
-            <td>UTF-8</td>
+            <td><b>UTF-8</b></td>
             <td>Forma mais comum e flexível de Unicode, ideal para web</td>
           </tr>
           <tr>
@@ -77,7 +77,7 @@
             <td>Declaração obrigatória no topo do HTML que define a versão do documento</td>
           </tr>
           <tr>
-            <td>HTML5</td>
+            <td><b>HTML5</b></td>
             <td>Versão atual e recomendada do HTML, moderna e compatível com os padrões</td>
           </tr>
         </tbody>
@@ -90,11 +90,16 @@
           </a>
         </li>
       </ul>
-      <div class="back-link" style="margin-top: 30px;">
-        <a href="../index.html">
-          ⬅ Voltar ao Menu
-        </a>
+    </div>
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
       </div>
     </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget ( 'https://vlibras.gov.br/app' );
+    </script>
   </body>
 </html>
